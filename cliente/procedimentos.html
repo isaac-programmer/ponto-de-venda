@@ -29,7 +29,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <script src="../js/raphael-min.js"></script>
     <script src="../js/morris.js"></script>
 </head>
-<body>
+<body onload="esconder()">
     <section id="container">
         <!--header start-->
         <header class="header fixed-top clearfix">
@@ -43,28 +43,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <!--logo end-->
             <div class="nav notify-row" id="top_menu">
             </div>
-            <div class="top-nav clearfix">
-                <!--search & user info start-->
-                <ul class="nav pull-right top-menu">
-                    <li>
-                        <input type="text" class="form-control search" placeholder=" Search">
-                    </li>
-                    <!-- user login dropdown start-->
-                    <li class="dropdown">
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                            <img alt="" src="../images/2.png">
-                            <span class="username">John Doe</span>
-                            <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu extended logout">
-                            <li><a href="../index.html"><i class="fa fa-key"></i>Sair</a></li>
-                        </ul>
-                    </li>
-                    <!-- user login dropdown end -->
-                
-                </ul>
-                <!--search & user info end-->
-            </div>
         </header>
         <!--header end-->
         <!--sidebar start-->
@@ -74,21 +52,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <div class="leftside-navigation">
                     <ul class="sidebar-menu" id="nav-accordion">
                         <li>
-                            <a class="active" href="painel-de-controle-julyan.html">
+                            <a href="procedimentos.html">
                                 <i class=""></i>
-                                <span>Solicitações</span>
+                                <span>Procedimentos</span>
                             </a>
                         </li>              
                         <li>
-                            <a href="fontawesome.html">
-                                <i class=""></i>
-                                <span>Cadastro de Procedimentos</span>
-                            </a>
-                        </li>
-                        <li>
                             <a href="../index.html">
                                 <i class=""></i>
-                                <span>Login Page</span>
+                                <span>Sair</span>
                             </a>
                         </li>
                     </ul>
@@ -108,12 +80,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 <header class="panel-heading">
                                     Óptica Kiroshi MK-1
                                     <span class="tools pull-right">
-                                        <a href="javascript:;" class="fa fa-chevron-down"></a>
+                                        <a href="javascript:;" class="fa fa-chevron-up"></a>
                                     </span>
                                 </header>
                                 <div class="panel-body">
                                     <ul class="list-group w3-agile">
-                                        <li class="list-group-item">Funcionalidades:</li>
+                                        <li class="list-group-item"><strong>Funcionalidades:</strong></li>
                                         <ul class="list-group-item">
                                             <li class="list-group-item">
                                                 Realiza o escaneamento de pessoas e fornece informações como: a força do inimigo, quem está no grupo ou o tipo de arma do inimigo. Tudo isso é mostrado na córnea.
@@ -122,76 +94,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 O disruptor de lente externa integrada faz com que câmeras de vigilância capturem apenas o seu rosto com um borrão.
                                             </li>
                                         </ul>
-                                        <li class="list-group-item">Vantagens:</li>
+                                        <li class="list-group-item"><strong>Vantagens:</strong></li>
                                         <ul class="list-group-item">
                                             <li class="list-group-item">
                                                 É constituída por aprimoradores eletroneurais que realizam a varredura do ambiente.
                                             </li>
                                         </ul>
+                                        <li class="list-group-item"><strong>Preço:</strong> R$ 130</li>
                                     </ul>
-                                </div>
-                            </section>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <section class="panel">
-                                <header class="panel-heading">
-                                    Dropzone
-                                    <span class="tools pull-right">
-                                        <a href="javascript:;" class="fa fa-chevron-down"></a>
-                                    </span>
-                                </header>
-                                <div class="panel-body">
-                                    adssadas
-                                </div>
-                            </section>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <section class="panel">
-                                <header class="panel-heading">
-                                    Dropzone
-                                    <span class="tools pull-right">
-                                        <a href="javascript:;" class="fa fa-chevron-down"></a>
-                                    </span>
-                                </header>
-                                <div class="panel-body">
-                                    <form id="upload" method="post" action="upload.php" enctype="multipart/form-data">
-                                    </form>
-                                </div>
-                            </section>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <section class="panel">
-                                <header class="panel-heading">
-                                    Dropzone
-                                    <span class="tools pull-right">
-                                        <a href="javascript:;" class="fa fa-chevron-down"></a>
-                                    </span>
-                                </header>
-                                <div class="panel-body">
-                                    <form id="upload" method="post" action="upload.php" enctype="multipart/form-data">
-                                    </form>
-                                </div>
-                            </section>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <section class="panel">
-                                <header class="panel-heading">
-                                    Dropzone
-                                    <span class="tools pull-right">
-                                        <a href="javascript:;" class="fa fa-chevron-down"></a>
-                                    </span>
-                                </header>
-                                <div class="panel-body">
-                                    <form id="upload" method="post" action="upload.php" enctype="multipart/form-data">
-                                    </form>
                                 </div>
                             </section>
                         </div>
@@ -212,6 +122,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <script src="../js/bootstrap.js"></script>
     <script src="../js/jquery.dcjqaccordion.2.7.js"></script>
     <script src="../js/scripts.js"></script>
+    <script src="../js/script02.js"></script>
     <script src="../js/jquery.slimscroll.js"></script>
     <script src="../js/jquery.nicescroll.js"></script>
     <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/flot-chart/excanvas.min.js"></script><![endif]-->
