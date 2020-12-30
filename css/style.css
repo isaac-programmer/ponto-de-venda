@@ -3068,7 +3068,8 @@ div#graph1, div#graph4, div#graph5, div#graph6, div#graph7, div#graph8, div#grap
     width: 30%;
 }
 .panel-body {
-    padding: 6px ! important;
+    padding: 66px ! important;
+    
 }
 .agileinfo-grap {
     margin-top: 0.8em;
