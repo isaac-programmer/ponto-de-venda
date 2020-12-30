@@ -779,17 +779,16 @@ ul.top-menu>li>a:hover,ul.top-menu>li>a:focus {
     line-height: 57px;
     letter-spacing: 0.2px;
     color: #000;
-    font-size: 18px;
-    font-weight: 400;
-    padding: 0 16px;
+    font-size: 80%;
+    padding: 0 6px 0 2.5px;
     background:#ddede0;
-   border-top-right-radius: 2px;
-   border-top-left-radius: 2px; 
-    text-transform: uppercase;
-    text-align: center;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px; 
+    text-align: ;
 }
 .panel {
     border: none ! important;
+    padding-bottom: 2.5px;
 }
 .agileinfo-grap {
     padding: 2em;
@@ -3068,7 +3067,7 @@ div#graph1, div#graph4, div#graph5, div#graph6, div#graph7, div#graph8, div#grap
     width: 30%;
 }
 .panel-body {
-    padding: 66px ! important;
+    padding: 6px ! important;
     
 }
 .agileinfo-grap {
