@@ -809,8 +809,10 @@ header.agileits-box-header.clearfix h3 {
 	padding: 2em;
 }
 span.panel-title{
+    display: block;
 	color:#000000;
-	 font-size: 18px;
+    font-size: 14px;
+    text-align: center;
 }
 
 .agile-calendar-grid {
