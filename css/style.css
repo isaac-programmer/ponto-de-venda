@@ -784,6 +784,19 @@ ul.top-menu>li>a:hover,ul.top-menu>li>a:focus {
     border-top-right-radius: 2px;
     border-top-left-radius: 2px; 
 }
+div.panel-heading {
+    position: relative;
+    height: 57px;
+    line-height: 57px;
+    letter-spacing: 0.2px;
+    color: #000;
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding: 0 6px 0 2.5px;
+    background:#ddede0;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px; 
+}
 .panel {
     border: none ! important;
     padding-bottom: 2.5px;
@@ -815,7 +828,6 @@ span.panel-title{
     text-align: center;
     font-weight: bold;
 }
-
 .agile-calendar-grid {
     border: 1px solid #c0dbc5;
 }
