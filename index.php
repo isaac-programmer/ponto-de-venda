@@ -37,7 +37,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<input type="submit" value="Entrar" name="login">
 				</form>
 				<p>Você ainda não possui um cadastro?</p>
-				<p><a href="cadastro.html" rel="next" target="_self">Cadastre-se Aqui!</a></p>
+				<p><a href="cadastro.php" rel="next" target="_self">Cadastre-se Aqui!</a></p>
 		</div>
 	</div>
 	<script src="js/bootstrap.js"></script>
