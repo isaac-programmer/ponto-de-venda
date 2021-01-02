@@ -36,7 +36,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<input type="text" class="ggg" name="telefone" placeholder="Digiteo seu número de telefone" required="">
 					<div class="clearfix"></div>
 					<input type="submit" value="Cadastrar" name="register">
-					<p><a href="index.php" rel="prev" target="_self">Voltar</a></p>
+					<p><a href="../index.php" rel="prev" target="_self">Voltar</a></p>
 				</form>
 		</div>
 	</div>
