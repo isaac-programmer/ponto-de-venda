@@ -35,7 +35,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <header class="header fixed-top clearfix">
                 <!--logo start-->
                 <div class="brand">
-                    <a href="painel-de-controle-julyan.html" class="logo">Ponto de Venda</a>
+                    <a href="solicitacoes.php" class="logo">Ponto de Venda</a>
                     <div class="sidebar-toggle-box">
                         <div class="fa fa-bars"></div>
                     </div>
@@ -52,15 +52,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="leftside-navigation">
                         <ul class="sidebar-menu" id="nav-accordion">           
                             <li>
-                                <a href="cadastro-de-procedimentos.html">
+                                <a href="">
                                     <i class=""></i>
-                                    <span>Cadastro de Procedimentos</span>
+                                    <span>Solicitações</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="solicitacoes.html">
+                                <a href="cadastro-de-procedimentos.html">
                                     <i class=""></i>
-                                    <span>Solicitações</span>
+                                    <span>Cadastro de Procedimentos</span>
                                 </a>
                             </li>
                             <li>
@@ -78,17 +78,37 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <!--main content start-->
             <section id="main-content">
                 <section class="wrapper">
-                    <div class="form-w3layouts">
-                        <!-- page start-->
-                        <div class="row">
-                            <div class="col-md-12">
+                    <div class="table-agile-info">
+                        <form method="#" action="#">
+                            <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <span class="panel-title">Seja Bem-Vindo!</span>
+                                    <span class="panel-title">Solicitações</span>
                                 </div>
+                                <div class="table-responsive">
+                                    <table class="table table-striped b-t b-light">
+                                        <thead>
+                                            <tr>
+                                                <th>Nome</th>
+                                                <th>Solicitante</th>
+                                                <th>E-mail</th>
+                                                <th>Telefone</th>
+                                                <th style="width:30px;"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Óptica Kiroshi MK-1</td>
+                                                <td>aaadasd</td>
+                                                <td>asddasd@dadasdasd</td>
+                                                <td>998979787897</td>
+                                                <!--<td><a href="" class="active" ui-toggle-class=""><i class="fa fa-times text-danger text"></i></a></td>-->
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>   
                             </div>
-                        </div>
-                        <!-- page end-->
-                    </div> 
+                        </form>
+                    </div>
                 </section>
                 <!-- footer -->
                     <div class="footer">
