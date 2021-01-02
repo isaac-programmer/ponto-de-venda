@@ -52,19 +52,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="leftside-navigation">
                         <ul class="sidebar-menu" id="nav-accordion">           
                             <li>
-                                <a href="">
+                                <a href="solicitacoes.php">
                                     <i class=""></i>
                                     <span>Solicitações</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="cadastro-de-procedimentos.html">
+                                <a href="cadastro-de-procedimentos.php">
                                     <i class=""></i>
                                     <span>Cadastro de Procedimentos</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="../index.html">
+                                <a href="../index.php">
                                     <i class=""></i>
                                     <span>Sair</span>
                                 </a>

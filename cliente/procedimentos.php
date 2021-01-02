@@ -35,7 +35,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <header class="header fixed-top clearfix">
                 <!--logo start-->
                 <div class="brand">
-                    <a href="procedimentos.html" class="logo">Ponto de Venda</a>
+                    <a href="procedimentos.php" class="logo">Ponto de Venda</a>
                     <div class="sidebar-toggle-box">
                         <div class="fa fa-bars"></div>
                     </div>
@@ -52,13 +52,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="leftside-navigation">
                         <ul class="sidebar-menu" id="nav-accordion">
                             <li>
-                                <a href="procedimentos.html">
+                                <a href="procedimentos.php">
                                     <i class=""></i>
                                     <span>Procedimentos</span>
                                 </a>
                             </li>              
                             <li>
-                                <a href="../index.html">
+                                <a href="../index.php">
                                     <i class=""></i>
                                     <span>Sair</span>
                                 </a>

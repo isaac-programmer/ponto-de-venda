@@ -35,7 +35,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <header class="header fixed-top clearfix">
                 <!--logo start-->
                 <div class="brand">
-                    <a href="painel-de-controle-julyan.html" class="logo">Ponto de Venda</a>
+                    <a href="solicitacoes.php" class="logo">Ponto de Venda</a>
                     <div class="sidebar-toggle-box">
                         <div class="fa fa-bars"></div>
                     </div>
@@ -52,19 +52,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="leftside-navigation">
                         <ul class="sidebar-menu" id="nav-accordion">           
                             <li>
-                                <a href="cadastro-de-procedimentos.html">
-                                    <i class=""></i>
-                                    <span>Cadastro de Procedimentos</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="solicitacoes.html">
+                                <a href="solicitacoes.php">
                                     <i class=""></i>
                                     <span>Solicitações</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="../index.html">
+                                <a href="cadastro-de-procedimentos.php">
+                                    <i class=""></i>
+                                    <span>Cadastro de Procedimentos</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../index.php">
                                     <i class=""></i>
                                     <span>Sair</span>
                                 </a>
@@ -110,7 +110,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 <div class="col-md-8 form-group"><label for=""></label></div>
                                             </div>
                                             <div class="col-md-6 form-group">
-                                                <a href="painel-de-controle-julyan.html" rel="prev" target="_self"><input type="button" value="Voltar" class = "btn btn-info" style="display: block; margin: 19px auto 0 0;"></a>
+                                                <a href="solicitacoes.php.php" rel="prev" target="_self"><input type="button" value="Voltar" class = "btn btn-info" style="display: block; margin: 19px auto 0 0;"></a>
                                             </div>
                                             <div class="col-md-6 form-group">
                                                 <button type="submit" class = "btn btn-info" style="display: block; margin: 19px 0 0 auto;">Cadastrar</button>
