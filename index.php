@@ -34,7 +34,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					if($_GET['login'] == 'erro'){
 						echo '<div class="alert alert-danger" role="alert">
 								<strong>Erro ao efetuar o login!</strong> Tente Novamente!
-								<button class="close" type="button" onclick="fechar()">×</button>
 					  		  </div>';
 					}
 				}
@@ -51,10 +50,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<p><a href="usuario/cadastro.php" rel="next" target="_self">Cadastre-se Aqui!</a></p>
 		</div>
 	</div>
+	<script>
+		$(document).ready(function(){
+			$('.alert').delay(3000);
+			$('.alert').hide(2000);
+		});
+	</script>
 	<script src="js/bootstrap.js"></script>
 	<script src="js/jquery.dcjqaccordion.2.7.js"></script>
 	<script src="js/scripts.js"></script>
-	<script src="js/script02.js"></script> 
 	<script src="js/jquery.slimscroll.js"></script>
 	<script src="js/jquery.nicescroll.js"></script>
 	<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/flot-chart/excanvas.min.js"></script><![endif]-->

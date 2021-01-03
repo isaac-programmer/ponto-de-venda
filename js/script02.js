@@ -8,15 +8,9 @@ function esconder(){
     painel.style.display = "none"
 }
 
-function fechar(){
-    let regiao = document.getElementsByClassName("w3layouts-main")[0]
-    let alerta = document.getElementsByClassName("alert")[0]
-    regiao.removeChild(alerta)
-}
-
-$(document).ready(function(){
-    $('.alert').show();
+$(function(){
     $('.alert').delay(3000);
     $('.alert').hide(2000);
-})
+});
+
 

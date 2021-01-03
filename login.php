@@ -7,7 +7,7 @@
    $telefone = $_POST['telefone'];
  
    //criando uma consulta mysql
-   $sql  = "select id_usuario, nome, email, telefone from usuario where nome='$usuario' and telefone='$telefone'";
+   $sql  = "select nome, email, telefone from usuario where nome='$usuario' and email='$email' and telefone='$telefone'";
  
    $consulta = $conexao->query($sql);
    
@@ -17,7 +17,7 @@
        //inicializar a sessão
 	      session_start();
 	      $_SESSION['login']='ok';
-         header('Location: julyan.php/solicitacoes.php?login=ok');
+         header('Location: julyan/solicitacoes.php?login=ok');
       }else{
         //inicializar a sessão
 	      session_start();
