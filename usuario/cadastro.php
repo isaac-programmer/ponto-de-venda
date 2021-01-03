@@ -31,14 +31,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="w3layouts-main">
 			<?php 
 				if(isset($_GET['insert'])){
-					if($_GET['insert']=='ok'){
+					if($_GET['insert'] == 'ok'){
 						echo '<div class="alert alert-success" role="alert">
 								<strong>Cadastro de Dados Realizado com Sucesso!</strong>
 								<button class="close" type="button" onclick="fechar()">×</button>
 							  </div>';
 	            	} 
 						
-					if($_GET['insert']=='erro'){
+					if($_GET['insert'] == 'erro'){
 						echo '<div class="alert alert-danger" role="alert">
 								<strong>Erro ao Cadastrar os Dados!</strong> Tente Novamente!
 								<button class="close" type="button" onclick="fechar()">×</button>

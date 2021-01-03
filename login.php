@@ -12,7 +12,7 @@
    $consulta = $conexao->query($sql);
    
    if($consulta->num_rows > 0) {
-     $objeto_usuario = $consulta->fetch_array(MYSQLI_ASSOC);
+      $objeto_usuario = $consulta->fetch_array(MYSQLI_ASSOC);
 	   if($objeto_usuario['nome'] == "Julyan" && $objeto_usuario['telefone'] == "(88) 9 9873-4533"){
        //inicializar a sessão
 	      session_start();
@@ -21,7 +21,7 @@
       }else{
         //inicializar a sessão
 	      session_start();
-	      $_SESSION['login']='ok';
+	      $_SESSION['login'] = 'ok';
 	      $_SESSION['nome'] = $usuario;
          $_SESSION['email'] = $email;
          $_SESSION['telefone'] = $telefone;
