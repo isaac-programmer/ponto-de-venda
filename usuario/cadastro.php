@@ -47,7 +47,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				}
 			?>
 			<h2>Cadastre-se</h2>
-				<form name="f1" method="POST" action="inserir.php">
+				<form method="POST" action="inserir.php">
 					<input type="text" class="ggg" name="nome" placeholder="Digite o seu nome" required="">
 					<input type="email" class="ggg" name="email" placeholder="Digite o seu email" required="">
 					<input type="text" class="ggg" name="telefone" placeholder="Digite o seu número de telefone" required="">

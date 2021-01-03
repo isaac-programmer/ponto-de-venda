@@ -13,3 +13,10 @@ function fechar(){
     let alerta = document.getElementsByClassName("alert")[0]
     regiao.removeChild(alerta)
 }
+
+$(document).ready(function(){
+    $('.alert').show();
+    $('.alert').delay(3000);
+    $('.alert').hide(2000);
+})
+

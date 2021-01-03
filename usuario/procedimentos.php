@@ -73,10 +73,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <section id="main-content">
                 <section class="wrapper">
                     <div class="form-w3layouts">
+                        <?php 
+                            if(isset($_GET['login'])){
+                                if($_GET['login'] == 'ok'){
+                                    echo '<div class="alert alert-success" role="alert">
+                                            <strong>Login efetuado com sucesso!</strong>
+                                          </div>';
+                                }
+                            }
+			            ?>
                         <!-- page start-->
                         <div class="row">
                             <div class="col-sm-12">
-                                <form method="#" action="#">
+                                <form method="POST" action="">
                                     <section class="panel">
                                         <div class="panel-heading">
                                             <span class="panel-title">Procedimentos</span>
