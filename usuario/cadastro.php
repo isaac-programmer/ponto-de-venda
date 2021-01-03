@@ -32,13 +32,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<?php 
 				if(isset($_GET['insert'])){
 					if($_GET['insert']=='ok'){
-		   
-						echo '<center><b><font color="green">Cadastro realizado com sucesso!</font></b></center>';
+						echo '<div class="alert alert-success" role="alert">
+								<strong>Cadastro de Dados Realizado com Sucesso!</strong>
+								<button class="close" type="button" onclick="fechar()">×</button>
+							  </div>';
 	            	} 
 						
 					if($_GET['insert']=='erro'){
-		   
-						echo '<center><b><font color="red">Erro ao cadastrar o usuário!</font></b></center>';
+						echo '<div class="alert alert-danger" role="alert">
+								<strong>Erro ao Cadastrar os Dados!</strong> Tente Novamente!
+								<button class="close" type="button" onclick="fechar()">×</button>
+							  </div>';
 	            	} 	
 				}
 			?>
@@ -56,6 +60,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<script src="../js/bootstrap.js"></script>
 	<script src="../js/jquery.dcjqaccordion.2.7.js"></script>
 	<script src="../js/scripts.js"></script>
+	<script src="../js/script02.js"></script>                  
 	<script src="../js/jquery.slimscroll.js"></script>
 	<script src="../js/jquery.nicescroll.js"></script>
 	<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/flot-chart/excanvas.min.js"></script><![endif]-->

@@ -2488,6 +2488,7 @@ h4 input[type="checkbox"] {
 /*--//placeholder-color--*/
 .alert {
     margin-bottom: 23px !important;
+    text-align: center;
 }
 div#chartContainer1,div#chartContainer2,div#chartContainer3,div#chartContainer4 {
     width: 100%;
