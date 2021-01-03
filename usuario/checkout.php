@@ -82,7 +82,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     <table class="table table-striped b-t b-light">
                                         <thead>
                                             <tr>
-                                                <th>Nome do Procedimento</th>
+                                                <th>Procedimento</th>
                                                 <th>Solicitante</th>
                                                 <th>E-mail</th>
                                                 <th>Telefone</th>

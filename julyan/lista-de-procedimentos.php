@@ -21,15 +21,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <!-- font CSS -->
         <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
         <!-- font-awesome icons -->
-        <link rel="stylesheet" href="../css/font.css" type="text/css"/>
+        <link rel="stylesheet" href="css/font.css" type="text/css"/>
         <link href="../css/font-awesome.css" rel="stylesheet"> 
-        <link rel="stylesheet" href="../css/morris.css" type="text/css"/>
+        <link rel="stylesheet" href="..css/morris.css" type="text/css"/>
         <!-- //font-awesome icons -->
         <script src="../js/jquery2.0.3.min.js"></script>
         <script src="../js/raphael-min.js"></script>
         <script src="../js/morris.js"></script>
     </head>
-    <body onload="esconder()">
+    <body>
         <section id="container">
             <!--header start-->
             <header class="header fixed-top clearfix">
@@ -51,7 +51,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <!-- sidebar menu start-->
                     <div class="leftside-navigation">
                         <ul class="sidebar-menu" id="nav-accordion">
-                        <li>
+                            <li>
                                 <a href="solicitacoes.php">
                                     <i class=""></i>
                                     <span>Solicitações</span>
@@ -84,50 +84,52 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <!--main content start-->
             <section id="main-content">
                 <section class="wrapper">
-                    <div class="form-w3layouts">
-                        <!-- page start-->
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <form method="#" action="#">
-                                    <section class="panel">
-                                        <div class="panel-heading">
-                                            <span class="panel-title">Procedimentos</span>
-                                        </div>
-                                        <header class="panel-heading">
-                                            <input type="checkbox" name="proce01" id="proce01" value="Optica Kiroshi MK-1">
-                                            &nbsp;
-                                            <label for="proce01">Óptica Kiroshi MK-1</label>
-                                            <span class="tools pull-right">
-                                                <a href="javascript:;" class="fa fa-chevron-up"></a>
-                                            </span>
-                                        </header>
-                                        <div class="panel-body">
-                                            <ul class="list-group w3-agile">
-                                                <li class="list-group-item"><strong>Funcionalidades:</strong></li>
-                                                <ul class="list-group-item">
-                                                    <li class="list-group-item" style="text-align: justify;">
-                                                        Realiza o escaneamento de pessoas e fornece informações como: a força do inimigo, quem está no grupo ou o tipo de arma do inimigo. Tudo isso é mostrado na córnea.
-                                                        O disruptor de lente externa integrada faz com que câmeras de vigilância capturem apenas o seu rosto com um borrão.
-                                                    </li>
-                                                </ul>
-                                                <li class="list-group-item"><strong>Vantagens:</strong></li>
-                                                <ul class="list-group-item">
-                                                    <li class="list-group-item" style="text-align: justify;">
-                                                        É constituída por aprimoradores eletroneurais que realizam a varredura do ambiente.
-                                                    </li>
-                                                </ul>
-                                                <li class="list-group-item"><strong>Preço:</strong> R$ 130</li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-12 form-group">
-                                            <button type="submit" class="btn btn-info" style="display: block; margin: 19px auto 0 auto;">Solicitar Procedimentos</button>
-                                        </div>
-                                    </section>
-                                </form>
-                            </div>
-                        </div>
-                        <!-- page end-->
+                    <div class="input-group m-bot15">
+                        <input type="text" class="form-control">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-success"><i class="fa fa-search"></i></button>
+                        </span>
                     </div>
+                    <div class="table-agile-info">
+                        <form method="#" action="#">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <span class="panel-title">Lista de Procedimentos</span>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-striped b-t b-light">
+                                        <thead>
+                                            <tr>
+                                                <th>Nome</th>
+                                                <th>Funcionalidades</th>
+                                                <th>Vantagens</th>
+                                                <th>Preço</th>
+                                                <th style="width:60px;">Opções</th>
+                                               
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Óptica Kiroshi MK-1</td>
+                                                <td>SSSSSSSasASasASasaSasASasASasASasASasASas</td>
+                                                <td>SasAS@sASasAS</td>
+                                                <td>(88) 9 9455-4444</td>
+                                                <td>
+                                                    <a href="" class="active" ui-toggle-class=""><i class="fa fa-times text-danger text"></i></a>
+                                                </td>
+                                                <td>
+                                                    <a href="" class="active" ui-toggle-class=""><i class="fa fa-times text-danger text"></i></a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="col-md-12 form-group">
+                                        <a href="solicitacoes.php" rel="prev" target="_self"><input type="button" class = "btn btn-info" style="display: block; margin: 19px auto 0 auto;" value="Voltar"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>                
                 </section>
                 <!-- footer -->
                     <div class="footer">
