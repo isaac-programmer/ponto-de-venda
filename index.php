@@ -30,9 +30,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<div class="log-w3">
 		<div class="w3layouts-main">
 			<h2>Login</h2>
-				<form action="#" method="post">
+				<form method="POST" action="login.php">
 					<input type="text" class="ggg" name="nome" placeholder="Digite o seu nome" required="">
-					<input type="email" class="ggg" name="email" placeholder="Digite o seu email" required="">					
+					<input type="email" class="ggg" name="email" placeholder="Digite o seu email" required="">
+					<input type="text" class="ggg" name="telefone" placeholder="Digite o seu número de telefone" required="">					
 					<div class="clearfix"></div>
 					<input type="submit" value="Entrar" name="login">
 				</form>
