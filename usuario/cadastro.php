@@ -29,6 +29,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <body>
 	<div class="reg-w3">
 		<div class="w3layouts-main">
+			<?php 
+				if(isset($_GET['insert'])){
+					if($_GET['insert']=='ok'){
+		   
+						echo '<center><b><font color="green">Cadastro realizado com sucesso!</font></b></center>';
+	            	} 
+						
+					if($_GET['insert']=='erro'){
+		   
+						echo '<center><b><font color="red">Erro ao cadastrar o usuário!</font></b></center>';
+	            	} 	
+				}
+			?>
 			<h2>Cadastre-se</h2>
 				<form name="f1" method="POST" action="inserir.php">
 					<input type="text" class="ggg" name="nome" placeholder="Digite o seu nome" required="">
