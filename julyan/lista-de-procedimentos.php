@@ -21,9 +21,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <!-- font CSS -->
         <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
         <!-- font-awesome icons -->
-        <link rel="stylesheet" href="css/font.css" type="text/css"/>
+        <link rel="stylesheet" href="../css/font.css" type="text/css"/>
         <link href="../css/font-awesome.css" rel="stylesheet"> 
-        <link rel="stylesheet" href="..css/morris.css" type="text/css"/>
+        <link rel="stylesheet" href="../css/morris.css" type="text/css"/>
         <!-- //font-awesome icons -->
         <script src="../js/jquery2.0.3.min.js"></script>
         <script src="../js/raphael-min.js"></script>
@@ -104,8 +104,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 <th>Funcionalidades</th>
                                                 <th>Vantagens</th>
                                                 <th>Preço</th>
-                                                <th style="width:60px;">Opções</th>
-                                               
+                                                <th style="width:60px;">Opções</th>  
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -115,7 +114,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 <td>SasAS@sASasAS</td>
                                                 <td>(88) 9 9455-4444</td>
                                                 <td>
-                                                    <a href="" class="active" ui-toggle-class=""><i class="fa fa-times text-danger text"></i></a>
+                                                    <a href="" class="active" ui-toggle-class=""><i class="fa fa-pencil-square-o text"></i></a>
                                                 </td>
                                                 <td>
                                                     <a href="" class="active" ui-toggle-class=""><i class="fa fa-times text-danger text"></i></a>
