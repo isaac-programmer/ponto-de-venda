@@ -29,13 +29,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <script src="../js/raphael-min.js"></script>
         <script src="../js/morris.js"></script>
     </head>
-    <body>
+    <body onload="esconder()">
         <section id="container">
             <!--header start-->
             <header class="header fixed-top clearfix">
                 <!--logo start-->
                 <div class="brand">
-                    <a href="solicitacoes.php" class="logo">Ponto de Venda</a>
+                    <a href="procedimentos.php" class="logo">Ponto de Venda</a>
                     <div class="sidebar-toggle-box">
                         <div class="fa fa-bars"></div>
                     </div>
@@ -50,8 +50,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <div id="sidebar" class="nav-collapse">
                     <!-- sidebar menu start-->
                     <div class="leftside-navigation">
-                        <ul class="sidebar-menu" id="nav-accordion">           
-                            <li>
+                        <ul class="sidebar-menu" id="nav-accordion">
+                        <li>
                                 <a href="solicitacoes.php">
                                     <i class=""></i>
                                     <span>Solicitações</span>
@@ -84,36 +84,49 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <!--main content start-->
             <section id="main-content">
                 <section class="wrapper">
-                    <div class="table-agile-info">
-                        <form method="#" action="#">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <span class="panel-title">Solicitações</span>
-                                </div>
-                                <div class="table-responsive">
-                                    <table class="table table-striped b-t b-light">
-                                        <thead>
-                                            <tr>
-                                                <th>Nome</th>
-                                                <th>Solicitante</th>
-                                                <th>E-mail</th>
-                                                <th>Telefone</th>
-                                                <th style="width:30px;"></th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Óptica Kiroshi MK-1</td>
-                                                <td>aaadasd</td>
-                                                <td>asddasd@dadasdasd</td>
-                                                <td>998979787897</td>
-                                                <!--<td><a href="" class="active" ui-toggle-class=""><i class="fa fa-times text-danger text"></i></a></td>-->
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>   
+                    <div class="form-w3layouts">
+                        <!-- page start-->
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <form method="#" action="#">
+                                    <section class="panel">
+                                        <div class="panel-heading">
+                                            <span class="panel-title">Procedimentos</span>
+                                        </div>
+                                        <header class="panel-heading">
+                                            <input type="checkbox" name="proce01" id="proce01" value="Optica Kiroshi MK-1">
+                                            &nbsp;
+                                            <label for="proce01">Óptica Kiroshi MK-1</label>
+                                            <span class="tools pull-right">
+                                                <a href="javascript:;" class="fa fa-chevron-up"></a>
+                                            </span>
+                                        </header>
+                                        <div class="panel-body">
+                                            <ul class="list-group w3-agile">
+                                                <li class="list-group-item"><strong>Funcionalidades:</strong></li>
+                                                <ul class="list-group-item">
+                                                    <li class="list-group-item" style="text-align: justify;">
+                                                        Realiza o escaneamento de pessoas e fornece informações como: a força do inimigo, quem está no grupo ou o tipo de arma do inimigo. Tudo isso é mostrado na córnea.
+                                                        O disruptor de lente externa integrada faz com que câmeras de vigilância capturem apenas o seu rosto com um borrão.
+                                                    </li>
+                                                </ul>
+                                                <li class="list-group-item"><strong>Vantagens:</strong></li>
+                                                <ul class="list-group-item">
+                                                    <li class="list-group-item" style="text-align: justify;">
+                                                        É constituída por aprimoradores eletroneurais que realizam a varredura do ambiente.
+                                                    </li>
+                                                </ul>
+                                                <li class="list-group-item"><strong>Preço:</strong> R$ 130</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-12 form-group">
+                                            <button type="submit" class="btn btn-info" style="display: block; margin: 19px auto 0 auto;">Solicitar Procedimentos</button>
+                                        </div>
+                                    </section>
+                                </form>
                             </div>
-                        </form>
+                        </div>
+                        <!-- page end-->
                     </div>
                 </section>
                 <!-- footer -->
