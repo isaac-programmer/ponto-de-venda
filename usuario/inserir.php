@@ -5,8 +5,8 @@
     $email = $_POST['email'];
     $telefone = $_POST['telefone'];
 
-    $sql = "insert into usuario (id_usuario,nome,email,telefone)
-                        values (null,'$nome','$email','$telefone')";
+    $sql = "insert into usuario (id_usuario,id_procedimento,nome,email,telefone)
+                        values (null,null,'$nome','$email','$telefone')";
     $insert = $conexao->query($sql);
 
     if($insert==true){
