@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 02-Jan-2021 às 20:19
+-- Tempo de geração: 03-Jan-2021 às 15:10
 -- Versão do servidor: 10.4.17-MariaDB
 -- versão do PHP: 8.0.0
 
@@ -43,7 +43,7 @@ CREATE TABLE `procedimento` (
 
 CREATE TABLE `usuario` (
   `id_usuario` int(11) UNSIGNED NOT NULL,
-  `id_procedimento` int(11) UNSIGNED NOT NULL,
+  `id_procedimento` int(11) UNSIGNED DEFAULT NULL,
   `nome` varchar(60) CHARACTER SET utf8 NOT NULL,
   `email` varchar(80) CHARACTER SET utf8 NOT NULL,
   `telefone` varchar(16) CHARACTER SET utf8 NOT NULL
@@ -80,7 +80,7 @@ ALTER TABLE `procedimento`
 -- AUTO_INCREMENT de tabela `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usuario` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id_usuario` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Restrições para despejos de tabelas
