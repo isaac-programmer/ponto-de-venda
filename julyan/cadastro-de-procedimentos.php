@@ -70,10 +70,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 </a>
                             </li>
                             <li>
-                                <a href="../index.php">
+                                <a href="#myModal" data-toggle="modal">
                                     <i class=""></i>
                                     <span>Sair</span>
-                                </a>
+                                </a>       
                             </li>
                         </ul>
                     </div>
