@@ -34,7 +34,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					if($_GET['login'] == 'erro'){
 						echo '<div class="alert alert-danger" role="alert">
 								<strong>Erro ao efetuar o login!</strong> Tente Novamente!
-					  		  </div>';
+							  </div>';
+								
+					}
+					if($_GET['login'] == 'semsessao'){
+						echo '<div class="alert alert-warning" role="alert">
+								<strong>Faça login no sistema!</strong>
+							  </div>';
 					}
 				}
 			?>
