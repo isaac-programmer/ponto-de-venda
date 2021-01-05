@@ -140,6 +140,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             </section>
             <!--main content end-->
         </section>
+        <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                        <h4 class="modal-title">Ponto de Venda</h4>
+                    </div>
+                    <div class="modal-body">
+                        Deseja sair do sistema?
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" type="button" data-dismiss="modal">Cancelar</button>
+                        <a class="btn btn-danger" href="../sair.php">Sair</a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <script src="../js/bootstrap.js"></script>
         <script src="../js/jquery.dcjqaccordion.2.7.js"></script>
         <script src="../js/scripts.js"></script>
