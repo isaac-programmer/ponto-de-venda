@@ -41,6 +41,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<strong>Atenção! Faça login no sistema!</strong>
 							  </div>';
 					}
+					
+					/**/
+				}
+				if(isset($_GET['saiu'])){
+					if($_GET['saiu'] == 'ok'){
+						echo '<div class="alert alert-info" role="alert">
+								<strong>Logout efetuado com sucesso!</strong>
+							  </div>';
+					}
 				}
 			?>
 			<h2>Login</h2>

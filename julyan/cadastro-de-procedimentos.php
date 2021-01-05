@@ -85,10 +85,25 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <section id="main-content">
                 <section class="wrapper">
                     <div class="form-w3layouts">
+                        <?php
+                            if(isset($_GET['insert'])){
+                                if($_GET['insert'] == 'ok'){
+                                    echo '<div class="alert alert-success" role="alert">
+								            <strong>Cadastro dos dados realizado com sucesso!</strong>
+							              </div>';
+                                }
+
+                                if($_GET['insert'] == 'erro'){
+                                    echo '<div class="alert alert-danger" role="alert">
+								            <strong>Erro ao cadastrar os dados!</strong> Tente Novamente!
+							              </div>';
+                                }
+                            }
+                        ?>
                         <!-- page start-->
                         <div class="row">
                             <div class="col-md-12">
-                                <form method="#" action="#">
+                                <form method="POST" action="inserir.php">
                                     <div data-collapsed="0" class="panel">
                                         <div class="panel-heading">
                                             <span class="panel-title">Cadastro de Procedimentos</span>
