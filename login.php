@@ -30,5 +30,4 @@
    }else{
       header('Location: index.php?login=erro');
    }	   
-   
 ?>
