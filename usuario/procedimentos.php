@@ -104,36 +104,34 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                             $consulta = $conexao->query($sql);
 
                                             if($consulta->num_rows > 0){
-                                            $linha = $consulta->fetch_array(MYSQLI_ASSOC);
-
-                                        }
+                                                for ($i=0; $i < ; $i++) { 
+                                                    
+                                                }
+                                                $linha = $consulta->fetch_array(MYSQLI_ASSOC);
+                                                echo '<header class="panel-heading">
+                                                        <input type="checkbox" name="proce0'.$linha['id_procedimento'].'" value="'.$linha['nome'].'">
+                                                        &nbsp;
+                                                        <label for="proce0'.$linha['id_procedimento'].'">'.$linha['nome'].'</label>
+                                                        <span class="tools pull-right">
+                                                            <a href="javascript:;" class="fa fa-chevron-up"></a>
+                                                        </span>
+                                                      </header>
+                                                      <div class="panel-body">
+                                                        <ul class="list-group w3-agile">
+                                                            <li class="list-group-item"><strong>Funcionalidades:</strong></li>
+                                                            <ul class="list-group-item">
+                                                                <li class="list-group-item" style="text-align: justify;">'.$linha['funcionalidades'].'</li>
+                                                            </ul>
+                                                            <li class="list-group-item"><strong>Vantagens:</strong></li>
+                                                            <ul class="list-group-item">
+                                                                <li class="list-group-item" style="text-align: justify;">'.$linha['vantagens'].'</li>
+                                                            </ul>
+                                                            <li class="list-group-item"><strong>Preço:</strong> R$ '.$linha['preco'].'</li>
+                                                        </ul>
+                                                      </div>';
+                                            }
                                         ?>
-                                        <header class="panel-heading">
-                                            <input type="checkbox" name="proce01" id="proce01" value="Optica Kiroshi MK-1">
-                                            &nbsp;
-                                            <label for="proce01">Óptica Kiroshi MK-1</label>
-                                            <span class="tools pull-right">
-                                                <a href="javascript:;" class="fa fa-chevron-up"></a>
-                                            </span>
-                                        </header>
-                                        <div class="panel-body">
-                                            <ul class="list-group w3-agile">
-                                                <li class="list-group-item"><strong>Funcionalidades:</strong></li>
-                                                <ul class="list-group-item">
-                                                    <li class="list-group-item" style="text-align: justify;">
-                                                        Realiza o escaneamento de pessoas e fornece informações como: a força do inimigo, quem está no grupo ou o tipo de arma do inimigo. Tudo isso é mostrado na córnea.
-                                                        O disruptor de lente externa integrada faz com que câmeras de vigilância capturem apenas o seu rosto com um borrão.
-                                                    </li>
-                                                </ul>
-                                                <li class="list-group-item"><strong>Vantagens:</strong></li>
-                                                <ul class="list-group-item">
-                                                    <li class="list-group-item" style="text-align: justify;">
-                                                        É constituída por aprimoradores eletroneurais que realizam a varredura do ambiente.
-                                                    </li>
-                                                </ul>
-                                                <li class="list-group-item"><strong>Preço:</strong> R$ 130</li>
-                                            </ul>
-                                        </div>
+                                        
                                         <div class="col-md-12 form-group">
                                             <button type="submit" class="btn btn-info" style="display: block; margin: 19px auto 0 auto;">Solicitar Procedimentos</button>
                                         </div>
