@@ -100,7 +100,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 }
                             } 
                         ?>
-                        <form method="POST" action="">
+                        <form method="POST" action="lista-de-procedimentos.php">
                             <div class="panel panel-default">
                                 <div class="input-group m-bot15">
                                     <input type="text" class="form-control" name="texto">

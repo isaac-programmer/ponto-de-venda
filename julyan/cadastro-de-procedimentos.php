@@ -112,21 +112,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                             <div class="row">
                                                 <div class="col-md-12 form-group">
                                                     <label for="">Nome do Procedimento:</label>
-                                                    <input type="text" name="procedimento" placeholder=".col-md-12" class="form-control">
+                                                    <input type="text" name="procedimento" placeholder=".col-md-12" class="form-control" required="">
                                                 </div>
                     
                                                 <div class="col-md-6 form-group">
                                                     <label for="">Funcionalidades:</label>
-                                                    <textarea name="funcionalidades" class="form-control" cols="57" rows="1"></textarea>
+                                                    <textarea name="funcionalidades" class="form-control" cols="57" rows="1" required=""></textarea>
                                                 </div>            
                     
                                                 <div class="col-md-6 form-group">
                                                     <label for="">Vantagens:</label>
-                                                    <textarea name="vantagens" class="form-control" cols="57" rows="1"></textarea>
+                                                    <textarea name="vantagens" class="form-control" cols="57" rows="1" required=""></textarea>
                                                 </div>
                                                 <div class="col-md-4 form-group">
                                                     <label for="">Preço:</label>
-                                                    <input type="number" name="preco" placeholder=".col-md-3" class="form-control">
+                                                    <input type="number" name="preco" placeholder=".col-md-3" class="form-control" required="">
                                                 </div>
                                                 <div class="col-md-8 form-group"><label for=""></label></div>
                                             </div>
