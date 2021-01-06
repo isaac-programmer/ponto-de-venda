@@ -86,7 +86,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 <th>Solicitante</th>
                                                 <th>E-mail</th>
                                                 <th>Telefone</th>
-                                                <th style="width:30px;"></th>
+                                                <th>Opções</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -96,7 +96,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 <td>SasAS@sASasAS</td>
                                                 <td>(88) 9 9455-4444</td>
                                                 <td>
-                                                    <a href="" class="active" ui-toggle-class=""><i class="fa fa-times text-danger text"></i></a>
+                                                    <a href="" class="active" ui-toggle-class=""><i class="fa fa-trash-o text-danger text"></i></a>
                                                 </td>
                                             </tr>
                                         </tbody>
