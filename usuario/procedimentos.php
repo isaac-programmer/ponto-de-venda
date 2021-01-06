@@ -96,6 +96,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         <div class="panel-heading">
                                             <span class="panel-title">Procedimentos</span>
                                         </div>
+                                        <?php 
+                                            include('../banco.php');
+
+                                            $sql = "select * from procedimento";
+
+                                            $consulta = $conexao->query($sql);
+
+                                            if($consulta->num_rows > 0){
+                                            $linha = $consulta->fetch_array(MYSQLI_ASSOC);
+
+                                        }
+                                        ?>
                                         <header class="panel-heading">
                                             <input type="checkbox" name="proce01" id="proce01" value="Optica Kiroshi MK-1">
                                             &nbsp;
