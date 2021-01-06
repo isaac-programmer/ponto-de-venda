@@ -35,7 +35,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <script src="../js/raphael-min.js"></script>
         <script src="../js/morris.js"></script>
     </head>
-    <body onload="esconder()">
+    <body>
         <section id="container">
             <!--header start-->
             <header class="header fixed-top clearfix">
@@ -104,17 +104,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                             $consulta = $conexao->query($sql);
 
                                             if($consulta->num_rows > 0){
-                                                for ($i=0; $i < ; $i++) { 
-                                                    
-                                                }
-                                                $linha = $consulta->fetch_array(MYSQLI_ASSOC);
-                                                echo '<header class="panel-heading">
+                                                while($linha = $consulta->fetch_array(MYSQLI_ASSOC)){
+                                                    echo '<header class="panel-heading">
                                                         <input type="checkbox" name="proce0'.$linha['id_procedimento'].'" value="'.$linha['nome'].'">
                                                         &nbsp;
                                                         <label for="proce0'.$linha['id_procedimento'].'">'.$linha['nome'].'</label>
-                                                        <span class="tools pull-right">
-                                                            <a href="javascript:;" class="fa fa-chevron-up"></a>
-                                                        </span>
                                                       </header>
                                                       <div class="panel-body">
                                                         <ul class="list-group w3-agile">
@@ -128,6 +122,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                             </ul>
                                                             <li class="list-group-item"><strong>Preço:</strong> R$ '.$linha['preco'].'</li>
                                                         </ul>
+                                                      </div>';
+                                                }
+                                            }else{
+                                                echo '<div class="alert alert-danger" role="alert">
+                                                        <strong>Nenhum procedimento foi encontrado!</strong>
                                                       </div>';
                                             }
                                         ?>
