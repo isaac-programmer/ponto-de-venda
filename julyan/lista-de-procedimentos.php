@@ -84,15 +84,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <!--main content start-->
             <section id="main-content">
                 <section class="wrapper">
-                    <div class="input-group m-bot15">
-                        <input type="text" class="form-control">
-                        <span class="input-group-btn">
-                            <button type="button" class="btn btn-success"><i class="fa fa-search"></i></button>
-                        </span>
-                    </div>
                     <div class="table-agile-info">
-                        <form method="#" action="#">
+                        <form method="POST" action="">
                             <div class="panel panel-default">
+                                <div class="input-group m-bot15">
+                                    <input type="text" class="form-control" name="texto">
+                                    <span class="input-group-btn">
+                                        <button type="submit" class="btn btn-success"><i class="fa fa-search"></i></button>
+                                    </span>
+                                </div>
                                 <div class="panel-heading">
                                     <span class="panel-title">Lista de Procedimentos</span>
                                 </div>
@@ -108,6 +108,32 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            <?php 
+                                                include('../banco.php');
+                                                
+                                                if(isset($_POST['texto'])){
+                                                    $texto = $_POST['texto'];
+                                                    $sql = "select * from procedimento where nome like %$texto%";
+                                                    $consulta = $conexao->query($sql);
+
+                                                    if($consulta->num_rows > 0){
+                                                        while($linha = $consulta->fetch_array(MYSQLI_ASSOC)){
+                                                            echo '<tr>
+                                                                    <td>'.$linha['nome'].'</td>
+                                                                    <td>'.$linha['funcionalidades'].'</td>
+                                                                    <td></td>
+                                                                    <td>(88) 9 9455-4444</td>
+                                                                    <td>
+                                                                        <a href="" class="active" ui-toggle-class=""><i class="fa fa-pencil-square-o text"></i></a>
+                                                                    </td>
+                                                                    <td>
+                                                                        <a href="" class="active" ui-toggle-class=""><i class="fa fa-times text-danger text"></i></a>
+                                                                    </td>
+                                                                  </tr>';
+                                                        }
+                                                    }
+                                                }
+                                            ?>
                                             <tr>
                                                 <td>Óptica Kiroshi MK-1</td>
                                                 <td>SSSSSSSasASasASasaSasASasASasASasASasASas</td>
