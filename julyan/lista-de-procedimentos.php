@@ -85,6 +85,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <section id="main-content">
                 <section class="wrapper">
                     <div class="table-agile-info">
+                        <?php
+                            if(isset($_GET['delete'])){
+                                if($_GET['delete'] == 'ok'){
+                                    echo '<div class="alert alert-success" role="alert">
+                                            <strong>Dados excluídos com sucesso!</strong>
+                                          </div>';
+                                }
+
+                                if ($_GET['delete'] == 'erro') {
+                                    echo '<div class="alert alert-danger" role="alert">
+								            <strong>Erro ao excluir os dados!</strong>
+							              </div>';
+                                }
+                            } 
+                        ?>
                         <form method="POST" action="">
                             <div class="panel panel-default">
                                 <div class="input-group m-bot15">
@@ -104,7 +119,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 <th>Funcionalidades</th>
                                                 <th>Vantagens</th>
                                                 <th>Preço</th>
-                                                <th style="width:60px;">Opções</th>  
+                                                <th>Opções</th>  
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -113,7 +128,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 
                                                 if(isset($_POST['texto'])){
                                                     $texto = $_POST['texto'];
-                                                    $sql = "select * from procedimento where nome like %$texto%";
+                                                    $sql = "select * from procedimento where nome like '%$texto%'";
                                                     $consulta = $conexao->query($sql);
 
                                                     if($consulta->num_rows > 0){
@@ -121,31 +136,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                             echo '<tr>
                                                                     <td>'.$linha['nome'].'</td>
                                                                     <td>'.$linha['funcionalidades'].'</td>
-                                                                    <td></td>
-                                                                    <td>(88) 9 9455-4444</td>
+                                                                    <td>'.$linha['vantagens'].'</td>
+                                                                    <td>'.$linha['preco'].'</td>
                                                                     <td>
-                                                                        <a href="" class="active" ui-toggle-class=""><i class="fa fa-pencil-square-o text"></i></a>
-                                                                    </td>
-                                                                    <td>
-                                                                        <a href="" class="active" ui-toggle-class=""><i class="fa fa-times text-danger text"></i></a>
+                                                                        <a href="#" class="active" ui-toggle-class=""><i class="fa fa-pencil-square-o text"></i></a>
+                                                                        <a href="deletar.php?id='.$linha['id_procedimento'].'" class="active" ui-toggle-class=""><i class="fa fa-trash-o text-danger text"></i></a>
                                                                     </td>
                                                                   </tr>';
                                                         }
+                                                    }else{
+                                                        echo '<div class="alert alert-danger" role="alert">
+                                                                <strong>Nenhum procedimento foi encontrado!</strong>
+                                                              </div>';
                                                     }
                                                 }
                                             ?>
-                                            <tr>
-                                                <td>Óptica Kiroshi MK-1</td>
-                                                <td>SSSSSSSasASasASasaSasASasASasASasASasASas</td>
-                                                <td>SasAS@sASasAS</td>
-                                                <td>(88) 9 9455-4444</td>
-                                                <td>
-                                                    <a href="" class="active" ui-toggle-class=""><i class="fa fa-pencil-square-o text"></i></a>
-                                                </td>
-                                                <td>
-                                                    <a href="" class="active" ui-toggle-class=""><i class="fa fa-times text-danger text"></i></a>
-                                                </td>
-                                            </tr>
                                         </tbody>
                                     </table>
                                     <div class="col-md-12 form-group">
