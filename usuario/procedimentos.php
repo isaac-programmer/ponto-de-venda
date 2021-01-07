@@ -107,24 +107,24 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 $cont = 1;
                                                 while($linha = $consulta->fetch_array(MYSQLI_ASSOC)){
                                                     echo '<header class="panel-heading">
-                                                        <input type="checkbox" name="proce0'.$cont.'" id="proce0'.$cont.'" value="'.$linha['nome'].'">
-                                                        &nbsp;
-                                                        <label for="proce0'.$cont.'">'.$linha['nome'].'</label>
-                                                      </header>
-                                                      <div class="panel-body">
-                                                        <ul class="list-group w3-agile">
-                                                            <li class="list-group-item"><strong>Funcionalidades:</strong></li>
-                                                            <ul class="list-group-item">
-                                                                <li class="list-group-item" style="text-align: justify;">'.$linha['funcionalidades'].'</li>
+                                                            <input type="checkbox" name="proce0'.$cont.'" id="proce0'.$cont.'" value="'.$linha['nome'].'">
+                                                            &nbsp;
+                                                            <label for="proce0'.$cont.'">'.$linha['nome'].'</label>
+                                                          </header>
+                                                          <div class="panel-body">
+                                                            <ul class="list-group w3-agile">
+                                                                <li class="list-group-item"><strong>Funcionalidades:</strong></li>
+                                                                <ul class="list-group-item">
+                                                                    <li class="list-group-item" style="text-align: justify;">'.$linha['funcionalidades'].'</li>
+                                                                </ul>
+                                                                <li class="list-group-item"><strong>Vantagens:</strong></li>
+                                                                <ul class="list-group-item">
+                                                                    <li class="list-group-item" style="text-align: justify;">'.$linha['vantagens'].'</li>
+                                                                </ul>
+                                                                <li class="list-group-item"><strong>Preço:</strong> R$ '.$linha['preco'].'</li>
                                                             </ul>
-                                                            <li class="list-group-item"><strong>Vantagens:</strong></li>
-                                                            <ul class="list-group-item">
-                                                                <li class="list-group-item" style="text-align: justify;">'.$linha['vantagens'].'</li>
-                                                            </ul>
-                                                            <li class="list-group-item"><strong>Preço:</strong> R$ '.$linha['preco'].'</li>
-                                                        </ul>
-                                                      </div>';
-                                                      $cont += 1;
+                                                          </div>';
+                                                          $cont += 1;
                                                 }
                                             }else{
                                                 echo '<div class="alert alert-danger" role="alert">
