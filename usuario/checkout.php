@@ -89,7 +89,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 <th>Solicitante</th>
                                                 <th>E-mail</th>
                                                 <th>Telefone</th>
-                                                <th>Opções</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -104,10 +103,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                             <td>'.$_SESSION['nome'].'</td>
                                                             <td>'.$_SESSION['email'].'</td>
                                                             <td>'.$_SESSION['telefone'].'</td>
-                                                            <td>
-                                                                <a href="" class="active" ui-toggle-class=""><i class="fa fa-trash-o text-danger text"></i></a>
-                                                            </td>
-                                                          </tr>'
+                                                          </tr>';
                                                 }
                                             ?>
                                             

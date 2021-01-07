@@ -88,9 +88,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 }
                             }
                             if(isset($_GET['enviar_procedimentos'])){
-                                if($_GET['enviar_procedimento'] == 'erro'){
+                                if($_GET['enviar_procedimentos'] == 'erro'){
                                     echo '<div class="alert alert-danger" role="alert">
-                                            <strong>Erro ao enviar o(s) procedimento(s) selcecionados!</strong>
+                                            <strong>Erro ao enviar o(s) procedimento(s) selecionados!</strong>
                                           </div>';
                                 }
                             }
