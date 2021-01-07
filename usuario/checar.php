@@ -4,8 +4,8 @@
     $cont = 1;
     $qtd_procedimentos = 0;
     $posicao = 0;
-    while (isset($_POST['proce0'.$cont.'']) || !isset($_POST['proce0'.$cont.''])) {
-        if (!isset($_POST['proce0'.$cont.''])) {
+    while(isset($_POST['proce0'.$cont.'']) || !isset($_POST['proce0'.$cont.''])){
+        if(!isset($_POST['proce0'.$cont.''])){
             if($cont > $limite){
                 break 1;
             }else{
