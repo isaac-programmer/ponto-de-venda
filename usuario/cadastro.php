@@ -33,13 +33,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				if(isset($_GET['insert'])){
 					if($_GET['insert'] == 'ok'){
 						echo '<div class="alert alert-success" role="alert">
-								<strong>Cadastro dos dados realizado com sucesso!</strong>
+								<strong>Usuário cadastrado com sucesso!</strong>
 							  </div>';
 	            	} 
 						
 					if($_GET['insert'] == 'erro'){
 						echo '<div class="alert alert-danger" role="alert">
-								<strong>Erro ao cadastrar os dados!</strong> Tente Novamente!
+								<strong>Erro ao cadastrar o usuário!</strong> Tente Novamente!
 							  </div>';
 	            	} 	
 				}
