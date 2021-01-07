@@ -35,7 +35,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <header class="header fixed-top clearfix">
                 <!--logo start-->
                 <div class="brand">
-                    <a href="procedimentos.php" class="logo">Ponto de Venda</a>
+                    <a href="solicitacoes.php" class="logo">Ponto de Venda</a>
                     <div class="sidebar-toggle-box">
                         <div class="fa fa-bars"></div>
                     </div>
@@ -50,7 +50,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <div id="sidebar" class="nav-collapse">
                     <!-- sidebar menu start-->
                     <div class="leftside-navigation">
-                        <ul class="sidebar-menu" id="nav-accordion">
+                        <ul class="sidebar-menu" id="nav-accordion">           
                             <li>
                                 <a href="solicitacoes.php">
                                     <i class=""></i>
@@ -84,82 +84,65 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <!--main content start-->
             <section id="main-content">
                 <section class="wrapper">
-                    <div class="table-agile-info">
+                    <div class="form-w3layouts">
                         <?php
-                            if(isset($_GET['delete'])){
-                                if($_GET['delete'] == 'ok'){
+                            if(isset($_GET['insert'])){
+                                if($_GET['insert'] == 'ok'){
                                     echo '<div class="alert alert-success" role="alert">
-                                            <strong>Dados excluídos com sucesso!</strong>
-                                          </div>';
-                                }
-
-                                if ($_GET['delete'] == 'erro') {
-                                    echo '<div class="alert alert-danger" role="alert">
-								            <strong>Erro ao excluir os dados!</strong>
+								            <strong>Cadastro dos dados realizado com sucesso!</strong>
 							              </div>';
                                 }
-                            } 
-                        ?>
-                        <form method="POST" action="lista-de-procedimentos.php">
-                            <div class="panel panel-default">
-                                <div class="input-group m-bot15">
-                                    <input type="text" class="form-control" name="texto">
-                                    <span class="input-group-btn">
-                                        <button type="submit" class="btn btn-success"><i class="fa fa-search"></i></button>
-                                    </span>
-                                </div>
-                                <div class="panel-heading">
-                                    <span class="panel-title">Lista de Procedimentos</span>
-                                </div>
-                                <div class="table-responsive">
-                                    <table class="table table-striped b-t b-light">
-                                        <thead>
-                                            <tr>
-                                                <th>Nome</th>
-                                                <th>Funcionalidades</th>
-                                                <th>Vantagens</th>
-                                                <th>Preço</th>
-                                                <th>Opções</th>  
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <?php 
-                                                include('../banco.php');
-                                                
-                                                if(isset($_POST['texto'])){
-                                                    $texto = $_POST['texto'];
-                                                    $sql = "select * from procedimento where nome like '%$texto%'";
-                                                    $consulta = $conexao->query($sql);
 
-                                                    if($consulta->num_rows > 0){
-                                                        while($linha = $consulta->fetch_array(MYSQLI_ASSOC)){
-                                                            echo '<tr>
-                                                                    <td>'.$linha['nome'].'</td>
-                                                                    <td>'.$linha['funcionalidades'].'</td>
-                                                                    <td>'.$linha['vantagens'].'</td>
-                                                                    <td>'.$linha['preco'].'</td>
-                                                                    <td>
-                                                                        <a href="alterar-cadastro-de-procedimento.php?id='.$linha['id_procedimento'].'" class="active" ui-toggle-class=""><i class="fa fa-pencil-square-o text"></i></a>
-                                                                        <a href="deletar.php?id='.$linha['id_procedimento'].'" class="active" ui-toggle-class=""><i class="fa fa-trash-o text-danger text"></i></a>
-                                                                    </td>
-                                                                  </tr>';
-                                                        }
-                                                    }else{
-                                                        echo '<div class="alert alert-danger" role="alert">
-                                                                <strong>Nenhum procedimento foi encontrado!</strong>
-                                                              </div>';
-                                                    }
-                                                }
-                                            ?>
-                                        </tbody>
-                                    </table>
-                                    <div class="col-md-12 form-group">
-                                        <a href="solicitacoes.php" rel="prev" target="_self"><input type="button" class = "btn btn-info" style="display: block; margin: 19px auto 0 auto;" value="Voltar"></a>
+                                if($_GET['insert'] == 'erro'){
+                                    echo '<div class="alert alert-danger" role="alert">
+								            <strong>Erro ao cadastrar os dados!</strong> Tente Novamente!
+							              </div>';
+                                }
+                            }
+                        ?>
+                        <!-- page start-->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <form method="POST" action="inserir.php">
+                                    <div data-collapsed="0" class="panel">
+                                        <div class="panel-heading">
+                                            <span class="panel-title">Cadastro de Procedimentos</span>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-md-12 form-group">
+                                                    <label for="">Nome do Procedimento:</label>
+                                                    <input type="text" name="procedimento" placeholder=".col-md-12" class="form-control" required="">
+                                                </div>
+                    
+                                                <div class="col-md-6 form-group">
+                                                    <label for="">Funcionalidades:</label>
+                                                    <textarea name="funcionalidades" class="form-control" cols="57" rows="1" required=""></textarea>
+                                                </div>            
+                    
+                                                <div class="col-md-6 form-group">
+                                                    <label for="">Vantagens:</label>
+                                                    <textarea name="vantagens" class="form-control" cols="57" rows="1" required=""></textarea>
+                                                </div>
+                                                <div class="col-md-4 form-group">
+                                                    <label for="">Preço:</label>
+                                                    <input type="number" name="preco" placeholder=".col-md-3" class="form-control" required="">
+                                                </div>
+                                                <div class="col-md-8 form-group"><label for=""></label></div>
+                                            </div>
+                                            <div class="col-md-6 form-group">
+                                                <a href="solicitacoes.php" rel="prev" target="_self"><input type="button" value="Voltar" class = "btn btn-info" style="display: block; margin: 19px auto 0 0;"></a>
+                                            </div>
+                                            <div class="col-md-6 form-group">
+                                                <button type="submit" class = "btn btn-info" style="display: block; margin: 19px 0 0 auto;">Cadastrar</button>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
+                                </form>
                             </div>
-                        </form>
-                    </div>                
+                        </div>
+                        <!-- page end-->
+                    </div>
                 </section>
                 <!-- footer -->
                     <div class="footer">
