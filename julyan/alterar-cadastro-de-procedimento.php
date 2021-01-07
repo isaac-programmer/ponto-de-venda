@@ -1,7 +1,7 @@
 <?php
-    $id = $_GET['id'];
-
     include('../banco.php');
+
+    $id = $_GET['id'];
 
     $sql = "select * from procedimento where id_procedimento = $id";
 
@@ -92,21 +92,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <section id="main-content">
                 <section class="wrapper">
                     <div class="form-w3layouts">
-                        <?php
-                            if(isset($_GET['alterou'])){
-                                if($_GET['alterou'] == 'ok'){
-                                    echo '<div class="alert alert-success" role="alert">
-								            <strong>Atualização dos dados realizada com sucesso!</strong>
-							              </div>';
-                                }
-
-                                if($_GET['alterou'] == 'erro'){
-                                    echo '<div class="alert alert-danger" role="alert">
-								            <strong>Erro ao atualizar os dados!</strong>
-							              </div>';
-                                }
-                            }
-                        ?>
                         <!-- page start-->
                         <div class="row">
                             <div class="col-md-12">

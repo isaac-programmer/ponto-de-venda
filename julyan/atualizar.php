@@ -15,8 +15,8 @@
     $atualizar = $conexao->query($sql);
 
     if ($atualizar == true) {
-        header('Location: alterar-cadastro-de-procedimento.php?alterou=ok');
+        header('Location: lista-de-procedimentos.php?alterou=ok');
     }else{
-        header('Location: alterar-cadastro-de-procedimento.php?alterou=erro');
+        header('Location: lista-de-procedimentos.php?alterou=erro');
     }
 ?>

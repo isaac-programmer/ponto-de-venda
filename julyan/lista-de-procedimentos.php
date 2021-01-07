@@ -93,6 +93,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							              </div>';
                                 }
                             } 
+                            if(isset($_GET['alterou'])){
+                                if($_GET['alterou'] == 'ok'){
+                                    echo '<div class="alert alert-success" role="alert">
+								            <strong>Atualização dos dados realizada com sucesso!</strong>
+							              </div>';
+                                }
+
+                                if($_GET['alterou'] == 'erro'){
+                                    echo '<div class="alert alert-danger" role="alert">
+								            <strong>Erro ao atualizar os dados!</strong>
+							              </div>';
+                                }
+                            }
                         ?>
                         <form method="POST" action="lista-de-procedimentos.php">
                             <div class="panel panel-default">
@@ -133,8 +146,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                                     <td>'.$linha['vantagens'].'</td>
                                                                     <td>'.$linha['preco'].'</td>
                                                                     <td>
-                                                                        <a href="alterar-cadastro-de-procedimento.php?id='.$linha['id_procedimento'].'" class="active" ui-toggle-class=""><i class="fa fa-pencil-square-o text"></i></a>
-                                                                        <a href="deletar.php?id='.$linha['id_procedimento'].'" class="active" ui-toggle-class=""><i class="fa fa-trash-o text-danger text"></i></a>
+                                                                        <a href="alterar-cadastro-de-procedimento.php?id='.$linha['id_procedimento'].'" title="Alterar Procedimento"><i class="fa fa-pencil-square-o text"></i></a>
+                                                                        <a href="deletar.php?id='.$linha['id_procedimento'].'" title="Excluir Procedimento"><i class="fa fa-trash-o text-danger text"></i></a>
                                                                     </td>
                                                                   </tr>';
                                                         }
