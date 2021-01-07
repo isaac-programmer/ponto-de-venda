@@ -87,11 +87,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                           </div>';
                                 }
                             }
+                            if(isset($_GET['enviar_procedimentos'])){
+                                if($_GET['enviar_procedimento'] == 'erro'){
+                                    echo '<div class="alert alert-danger" role="alert">
+                                            <strong>Erro ao enviar o(s) procedimento(s) selcecionados!</strong>
+                                          </div>';
+                                }
+                            }
 			            ?>
                         <!-- page start-->
                         <div class="row">
                             <div class="col-sm-12">
-                                <form method="POST" action="">
+                                <form method="POST" action="checar.php">
                                     <section class="panel">
                                         <div class="panel-heading">
                                             <span class="panel-title">Procedimentos</span>

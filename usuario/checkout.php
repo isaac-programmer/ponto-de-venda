@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!--A Design by W3layouts
 Author: W3layout
 Author URL: http://w3layouts.com
@@ -90,15 +93,24 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>Óptica Kiroshi MK-1</td>
-                                                <td>Sas</td>
-                                                <td>SasAS@sASasAS</td>
-                                                <td>(88) 9 9455-4444</td>
-                                                <td>
-                                                    <a href="" class="active" ui-toggle-class=""><i class="fa fa-trash-o text-danger text"></i></a>
-                                                </td>
-                                            </tr>
+                                            <?php
+                                                include('../banco.php');
+
+                                                $total_procedimentos = $_SESSION['qtd_procedimentos'];
+
+                                                for ($i=0; $i < $total_procedimentos; $i++) { 
+                                                    echo '<tr>
+                                                            <td>'.$_SESSION['procedimentos'][$i].'</td>
+                                                            <td>'.$_SESSION['nome'].'</td>
+                                                            <td>'.$_SESSION['email'].'</td>
+                                                            <td>'.$_SESSION['telefone'].'</td>
+                                                            <td>
+                                                                <a href="" class="active" ui-toggle-class=""><i class="fa fa-trash-o text-danger text"></i></a>
+                                                            </td>
+                                                          </tr>'
+                                                }
+                                            ?>
+                                            
                                         </tbody>
                                     </table>
                                     <div class="col-md-6 form-group">

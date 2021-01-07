@@ -22,8 +22,8 @@
         //inicializar a sessão
 	      session_start();
 	      $_SESSION['login'] = 'ok';
-	      //$_SESSION['nome'] = $nome;
-         //$_SESSION['email'] = $email;
+	      $_SESSION['nome'] = $nome;
+         $_SESSION['email'] = $email;
          $_SESSION['telefone'] = $telefone;
          header('Location: usuario/procedimentos.php?login=ok');
       }  
