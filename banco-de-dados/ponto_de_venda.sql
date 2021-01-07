@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 03-Jan-2021 às 15:38
+-- Tempo de geração: 07-Jan-2021 às 18:11
 -- Versão do servidor: 10.4.17-MariaDB
 -- versão do PHP: 8.0.0
 
@@ -35,6 +35,13 @@ CREATE TABLE `procedimento` (
   `preco` decimal(7,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Extraindo dados da tabela `procedimento`
+--
+
+INSERT INTO `procedimento` (`id_procedimento`, `nome`, `funcionalidades`, `vantagens`, `preco`) VALUES
+(1, 'Óptica Roshiki LX - 02', 'Realiza o escaneamento de pessoas e fornece informações como: a força do inimigo, quem está no grupo ou o tipo de arma do inimigo. Tudo isso é mostrado na córnea.\r\n                                                        O disruptor de lente externa integrada faz com que câmeras de vigilância capturem apenas o seu rosto com um borrão.', 'É constituída por aprimoradores eletroneurais que realizam a varredura do ambiente.', '130.00');
+
 -- --------------------------------------------------------
 
 --
@@ -43,10 +50,21 @@ CREATE TABLE `procedimento` (
 
 CREATE TABLE `usuario` (
   `id_usuario` int(11) UNSIGNED NOT NULL,
-  `id_procedimento` int(11) UNSIGNED DEFAULT NULL,
   `nome` varchar(60) CHARACTER SET utf8 NOT NULL,
   `email` varchar(80) CHARACTER SET utf8 NOT NULL,
   `telefone` varchar(16) CHARACTER SET utf8 NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `usuario_solicita_procedimento`
+--
+
+CREATE TABLE `usuario_solicita_procedimento` (
+  `id_solicita_procedimento` int(11) UNSIGNED NOT NULL,
+  `usuario_solicitante` int(11) UNSIGNED NOT NULL,
+  `procedimento_solicitado` int(11) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -63,8 +81,13 @@ ALTER TABLE `procedimento`
 -- Índices para tabela `usuario`
 --
 ALTER TABLE `usuario`
-  ADD PRIMARY KEY (`id_usuario`),
-  ADD KEY `id_procedimento` (`id_procedimento`);
+  ADD PRIMARY KEY (`id_usuario`);
+
+--
+-- Índices para tabela `usuario_solicita_procedimento`
+--
+ALTER TABLE `usuario_solicita_procedimento`
+  ADD PRIMARY KEY (`id_solicita_procedimento`);
 
 --
 -- AUTO_INCREMENT de tabelas despejadas
@@ -74,7 +97,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de tabela `procedimento`
 --
 ALTER TABLE `procedimento`
-  MODIFY `id_procedimento` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id_procedimento` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de tabela `usuario`
@@ -83,14 +106,10 @@ ALTER TABLE `usuario`
   MODIFY `id_usuario` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- Restrições para despejos de tabelas
+-- AUTO_INCREMENT de tabela `usuario_solicita_procedimento`
 --
-
---
--- Limitadores para a tabela `usuario`
---
-ALTER TABLE `usuario`
-  ADD CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`id_procedimento`) REFERENCES `procedimento` (`id_procedimento`);
+ALTER TABLE `usuario_solicita_procedimento`
+  MODIFY `id_solicita_procedimento` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
