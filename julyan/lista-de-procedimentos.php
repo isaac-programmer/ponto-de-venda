@@ -58,12 +58,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 </a>
                             </li>
                             <li>
-                                <a href="cadastro-de-procedimento.php">
-                                    <i class=""></i>
-                                    <span>Cadastro de Procedimentos</span>
-                                </a>
-                            </li>
-                            <li>
                                 <a href="lista-de-procedimentos.php">
                                     <i class=""></i>
                                     <span>Lista de Procedimentos</span>
@@ -153,8 +147,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                             ?>
                                         </tbody>
                                     </table>
-                                    <div class="col-md-12 form-group">
-                                        <a href="solicitacoes.php" rel="prev" target="_self"><input type="button" class = "btn btn-info" style="display: block; margin: 19px auto 0 auto;" value="Voltar"></a>
+                                    <div class="col-md-6 form-group">
+                                        <a href="solicitacoes.php" rel="prev" target="_self"><input type="button" class = "btn btn-info" style="display: block; margin: 19px 0 0 0;" value="Voltar"></a>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <a href="cadastro-de-procedimentos.php" rel="prev" target="_self"><input type="button" class = "btn btn-info" style="display: block; margin: 19px 0 0 auto;" value="Cadastrar Procedimento"></a>
                                     </div>
                                 </div>
                             </div>

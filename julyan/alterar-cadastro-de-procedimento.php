@@ -1,3 +1,16 @@
+<?php
+    $id = $_GET['id'];
+
+    include('../banco.php');
+
+    $sql = "select * from procedimento where id_procedimento = $id";
+
+    $consulta = $conexao->query($sql);
+
+    if($consulta->num_rows > 0){
+        $linha = $consulta->fetch_array(MYSQLI_ASSOC);
+    }
+?>
 <!--A Design by W3layouts
 Author: W3layout
 Author URL: http://w3layouts.com
@@ -58,12 +71,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 </a>
                             </li>
                             <li>
-                                <a href="cadastro-de-procedimento.php">
-                                    <i class=""></i>
-                                    <span>Cadastro de Procedimentos</span>
-                                </a>
-                            </li>
-                            <li>
                                 <a href="lista-de-procedimentos.php">
                                     <i class=""></i>
                                     <span>Lista de Procedimentos</span>
@@ -86,16 +93,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <section class="wrapper">
                     <div class="form-w3layouts">
                         <?php
-                            if(isset($_GET['insert'])){
-                                if($_GET['insert'] == 'ok'){
+                            if(isset($_GET['alterou'])){
+                                if($_GET['alterou'] == 'ok'){
                                     echo '<div class="alert alert-success" role="alert">
-								            <strong>Cadastro dos dados realizado com sucesso!</strong>
+								            <strong>Atualização dos dados realizada com sucesso!</strong>
 							              </div>';
                                 }
 
-                                if($_GET['insert'] == 'erro'){
+                                if($_GET['alterou'] == 'erro'){
                                     echo '<div class="alert alert-danger" role="alert">
-								            <strong>Erro ao cadastrar os dados!</strong> Tente Novamente!
+								            <strong>Erro ao atualizar os dados!</strong>
 							              </div>';
                                 }
                             }
@@ -103,38 +110,41 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <!-- page start-->
                         <div class="row">
                             <div class="col-md-12">
-                                <form method="POST" action="inserir.php">
+                                <form method="POST" action="atualizar.php">
                                     <div data-collapsed="0" class="panel">
                                         <div class="panel-heading">
-                                            <span class="panel-title">Cadastro de Procedimentos</span>
+                                            <span class="panel-title">Alteração de Procedimento</span>
                                         </div>
                                         <div class="panel-body">
                                             <div class="row">
                                                 <div class="col-md-12 form-group">
+                                                    <input type="hidden" value="<?php echo $linha['id_procedimento']; ?>" name="id_proced" placeholder=".col-md-12" class="form-control" required="" readonly>
+                                                </div>
+                                                <div class="col-md-6 form-group">
                                                     <label for="">Nome do Procedimento:</label>
-                                                    <input type="text" name="procedimento" placeholder=".col-md-12" class="form-control" required="">
+                                                    <input type="text" value="<?php echo $linha['nome']; ?>" name="procedimento" placeholder=".col-md-12" class="form-control" required="">
                                                 </div>
                     
                                                 <div class="col-md-6 form-group">
                                                     <label for="">Funcionalidades:</label>
-                                                    <textarea name="funcionalidades" class="form-control" cols="57" rows="1" required=""></textarea>
+                                                    <textarea name="funcionalidades" class="form-control" cols="57" rows="1" style="resize: none;" required=""><?php echo $linha['funcionalidades']; ?></textarea>
                                                 </div>            
                     
                                                 <div class="col-md-6 form-group">
                                                     <label for="">Vantagens:</label>
-                                                    <textarea name="vantagens" class="form-control" cols="57" rows="1" required=""></textarea>
+                                                    <textarea name="vantagens" class="form-control" cols="57" rows="1" style="resize: none;" required=""><?php echo $linha['vantagens']; ?></textarea>
                                                 </div>
-                                                <div class="col-md-4 form-group">
+                                                <div class="col-md-2 form-group">
                                                     <label for="">Preço:</label>
-                                                    <input type="number" name="preco" placeholder=".col-md-3" class="form-control" required="">
+                                                    <input type="number" value="<?php echo $linha['preco']; ?>" name="preco" placeholder=".col-md-3" class="form-control" required="">
                                                 </div>
-                                                <div class="col-md-8 form-group"><label for=""></label></div>
+                                                <div class="col-md-12 form-group"><label for=""></label></div>
                                             </div>
                                             <div class="col-md-6 form-group">
-                                                <a href="solicitacoes.php" rel="prev" target="_self"><input type="button" value="Voltar" class = "btn btn-info" style="display: block; margin: 19px auto 0 0;"></a>
+                                                <a href="lista-de-procedimentos.php" rel="prev" target="_self"><input type="button" value="Voltar" class = "btn btn-info" style="display: block; margin: 19px auto 0 0;"></a>
                                             </div>
                                             <div class="col-md-6 form-group">
-                                                <button type="submit" class = "btn btn-info" style="display: block; margin: 19px 0 0 auto;">Cadastrar</button>
+                                                <button type="submit" class = "btn btn-info" style="display: block; margin: 19px 0 0 auto;">Atualizar</button>
                                             </div>
                                         </div>
                                     </div>
