@@ -83,26 +83,26 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             if(isset($_GET['delete'])){
                                 if($_GET['delete'] == 'ok'){
                                     echo '<div class="alert alert-success" role="alert">
-                                            <strong>Dados excluídos com sucesso!</strong>
+                                            <strong>Procedimento excluído com sucesso!</strong>
                                           </div>';
                                 }
 
                                 if ($_GET['delete'] == 'erro') {
                                     echo '<div class="alert alert-danger" role="alert">
-								            <strong>Erro ao excluir os dados!</strong>
+								            <strong>Erro ao excluir o procedimento!</strong>
 							              </div>';
                                 }
                             } 
                             if(isset($_GET['alterou'])){
                                 if($_GET['alterou'] == 'ok'){
                                     echo '<div class="alert alert-success" role="alert">
-								            <strong>Atualização dos dados realizada com sucesso!</strong>
+								            <strong>Atualização do procedimento realizada com sucesso!</strong>
 							              </div>';
                                 }
 
                                 if($_GET['alterou'] == 'erro'){
                                     echo '<div class="alert alert-danger" role="alert">
-								            <strong>Erro ao atualizar os dados!</strong>
+								            <strong>Erro ao atualizar o procedimento!</strong>
 							              </div>';
                                 }
                             }
@@ -164,7 +164,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         <a href="solicitacoes.php" rel="prev" target="_self"><input type="button" class = "btn btn-info" style="display: block; margin: 19px 0 0 0;" value="Voltar"></a>
                                     </div>
                                     <div class="col-md-6 form-group">
-                                        <a href="cadastro-de-procedimentos.php" rel="prev" target="_self"><input type="button" class = "btn btn-info" style="display: block; margin: 19px 0 0 auto;" value="Cadastrar Procedimento"></a>
+                                        <a href="cadastro-de-procedimento.php" rel="prev" target="_self"><input type="button" class = "btn btn-info" style="display: block; margin: 19px 0 0 auto;" value="Cadastrar Procedimento"></a>
                                     </div>
                                 </div>
                             </div>

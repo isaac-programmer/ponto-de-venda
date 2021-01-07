@@ -12,8 +12,8 @@
     $insert = $conexao->query($sql);
 
     if($insert == true){
-        header('Location: cadastro-de-procedimentos.php?insert=ok');
+        header('Location: cadastro-de-procedimento.php?insert=ok');
     }else{
-        header('Location: cadastro-de-procedimentos.php?insert=erro');
+        header('Location: cadastro-de-procedimento.php?insert=erro');
     }
 ?>

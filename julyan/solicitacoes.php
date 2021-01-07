@@ -58,12 +58,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 </a>
                             </li>
                             <li>
-                                <a href="cadastro-de-procedimento.php">
-                                    <i class=""></i>
-                                    <span>Cadastro de Procedimentos</span>
-                                </a>
-                            </li>
-                            <li>
                                 <a href="lista-de-procedimentos.php">
                                     <i class=""></i>
                                     <span>Lista de Procedimentos</span>
