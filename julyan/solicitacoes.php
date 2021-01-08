@@ -109,11 +109,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <div class="table-responsive">
                                 <table class="table table-striped b-t b-light">
                                     <thead>
-                                        <tr>
+                                        <tr style="text-align: center;">
                                             <th>Nome</th>
                                             <th>Solicitante</th>
                                             <th>E-mail</th>
                                             <th>Telefone</th>
+                                            <th>Data da Solicitação</th>
                                             <th>Opções</th>
                                         </tr>
                                     </thead>
@@ -121,11 +122,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         <?php
                                             include('../banco.php');
 
-                                            $sql = "select usp.id_solicita_procedimento, p.nome nome_procedimento, u.nome nome_usuario, u.email email_usuario, u.telefone telefone_usuario from usuario u
-                                                    JOIN usuario_solicita_procedimento usp 
-                                                    ON u.id_usuario = usp.usuario_solicitante
-                                                    JOIN procedimento p
-                                                    ON usp.procedimento_solicitado = p.id_procedimento";
+                                            $sql = "select usp.id_solicita_procedimento, p.nome nome_procedimento,
+                                                    u.nome nome_usuario, u.email email_usuario,
+                                                    u.telefone telefone_usuario, usp.data_solicitacao from usuario u
+                                                    JOIN usuario_solicita_procedimento usp ON u.id_usuario = usp.usuario_solicitante
+                                                    JOIN procedimento p ON usp.procedimento_solicitado = p.id_procedimento";
 
                                             $consulta = $conexao->query($sql);
 
@@ -136,6 +137,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                             <td>'.$linha['nome_usuario'].'</td>
                                                             <td>'.$linha['email_usuario'].'</td>
                                                             <td>'.$linha['telefone_usuario'].'</td>
+                                                            <td>'.$linha['data_solicitacao'].'</td>
                                                             <td>
                                                                 <a href="deletar02.php?id='.$linha['id_solicita_procedimento'].'" title="Excluir Solicitação"><i class="fa fa-trash-o text-danger text"></i></a>
                                                             </td>
