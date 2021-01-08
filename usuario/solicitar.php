@@ -7,6 +7,7 @@
     $limite = $_SESSION['qtd_procedimentos'];
     $nome_usuario = $_SESSION['nome'];
     $telefone_usuario = $_SESSION['telefone'];
+    $data_solicitacao = date("d/m/Y");
 
     //Obtendo o id do usuário solicitante
     $sql = "select id_usuario from usuario where nome = '$nome_usuario' and telefone = '$telefone_usuario'";
@@ -39,8 +40,8 @@
     
     //Fazendo um Insert na tabela usuario_solicita_procedimento
     for($i=0; $i<$limite; $i++) { 
-        $sql3[$i] = "insert into usuario_solicita_procedimento(id_solicita_procedimento, usuario_solicitante, procedimento_solicitado) 
-                                 values(null,$id_usuario,$id_procedimentos[$i])";
+        $sql3[$i] = "insert into usuario_solicita_procedimento(id_solicita_procedimento, usuario_solicitante, procedimento_solicitado, data_solicitacao) 
+                                 values(null,$id_usuario,$id_procedimentos[$i],'$data_solicitacao')";
     }
 
     //Fazendo uma consulta para cada Insert presente no array sql3
