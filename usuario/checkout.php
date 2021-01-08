@@ -1,8 +1,5 @@
 <?php
 	session_start();
-	if(!isset($_SESSION['login'])){
-		header('Location: ../index.php?login=semsessao');
-	}
 ?>
 <!--A Design by W3layouts
 Author: W3layout

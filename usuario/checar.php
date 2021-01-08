@@ -1,9 +1,4 @@
 <?php
-	session_start();
-	if(!isset($_SESSION['login'])){
-		header('Location: ../index.php?login=semsessao');
-	}
-
     //Marco consegui fazer uma área de chekout dinâmica!!!
     $limite = count($_POST);
     $cont = 1;
@@ -26,6 +21,7 @@
     }
 
     if($qtd_procedimentos > 0 && $posicao > 0){
+        session_start();
         $_SESSION['procedimentos'] = $procedimentos;
         $_SESSION['qtd_procedimentos'] = $qtd_procedimentos;
         header('Location: checkout.php');
