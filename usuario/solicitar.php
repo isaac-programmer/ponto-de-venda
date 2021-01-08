@@ -47,4 +47,6 @@
     for($i=0; $i<$limite; $i++) { 
         $consulta3[$i] = $conexao->query($sql3[$i]);
     }
+
+    header('Location: procedimentos.php?solicitou=ok');
 ?>

@@ -94,6 +94,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                           </div>';
                                 }
                             }
+                            if(isset($_GET['solicitou'])){
+                                if($_GET['solicitou'] == 'ok'){
+                                    echo '<div class="alert alert-success" role="alert">
+                                            <strong>Solicitação dos procedimento(s) efetuada com sucesso!</strong>
+                                          </div>';
+                                }
+                            }
 			            ?>
                         <!-- page start-->
                         <div class="row">
