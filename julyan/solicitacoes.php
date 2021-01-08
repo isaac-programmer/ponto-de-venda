@@ -1,3 +1,9 @@
+<?php
+	session_start();
+	if(!isset($_SESSION['login'])){
+		header('Location: ../index.php?login=semsessao');
+	}
+?>
 <!--A Design by W3layouts
 Author: W3layout
 Author URL: http://w3layouts.com
@@ -80,8 +86,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <section class="wrapper">
                     <div class="table-agile-info">
                         <?php 
-                            if(isset($_GET['login'])){
-                                if($_GET['login'] == 'ok'){
+                            if(isset($_SESSION['login'])){
+                                if($_SESSION['login'] == 'ok'){
                                     echo '<div class="alert alert-success" role="alert">
                                             <strong>Login efetuado com sucesso!</strong>
                                           </div>';

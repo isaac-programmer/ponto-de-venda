@@ -16,8 +16,8 @@
 	   if($usuario['nome'] == "Julyan" && $usuario['telefone'] == "(88) 9 9873-4533"){
        //inicializar a sessão
 	      session_start();
-	      $_SESSION['login']='ok';
-         header('Location: julyan/solicitacoes.php?login=ok');
+	      $_SESSION['login'] = 'ok';
+         header('Location: julyan/solicitacoes.php');
       }else{
         //inicializar a sessão
 	      session_start();
@@ -25,7 +25,7 @@
 	      $_SESSION['nome'] = $nome;
          $_SESSION['email'] = $email;
          $_SESSION['telefone'] = $telefone;
-         header('Location: usuario/procedimentos.php?login=ok');
+         header('Location: usuario/procedimentos.php');
       }  
    }else{
       header('Location: index.php?login=erro');
