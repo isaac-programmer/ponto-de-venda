@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 08-Jan-2021 às 16:18
+-- Tempo de geração: 08-Jan-2021 às 19:35
 -- Versão do servidor: 10.4.17-MariaDB
 -- versão do PHP: 8.0.0
 
@@ -62,7 +62,7 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`id_usuario`, `nome`, `email`, `telefone`) VALUES
-(1, 'Zack', 'zackcyber@gmail.com', '(88) 9 9745-8844'),
+(1, 'Isaac', 'isaaccyber@gmail.com', '(88) 9 9745-8844'),
 (2, 'Julyan', 'julyanmedicanico77@gmail.com', '(88) 9 9873-4533'),
 (3, 'Juliana Pereira', 'julianapereira@hotmail.com', '(88) 9 9944-3321');
 
@@ -76,7 +76,7 @@ CREATE TABLE `usuario_solicita_procedimento` (
   `id_solicita_procedimento` int(11) UNSIGNED NOT NULL,
   `usuario_solicitante` int(11) UNSIGNED NOT NULL,
   `procedimento_solicitado` int(11) UNSIGNED NOT NULL,
-  `data_solicitacao` char(9) CHARACTER SET utf8 NOT NULL
+  `data_solicitacao` char(10) CHARACTER SET utf8 NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -111,19 +111,19 @@ ALTER TABLE `usuario_solicita_procedimento`
 -- AUTO_INCREMENT de tabela `procedimento`
 --
 ALTER TABLE `procedimento`
-  MODIFY `id_procedimento` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_procedimento` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de tabela `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usuario` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_usuario` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de tabela `usuario_solicita_procedimento`
 --
 ALTER TABLE `usuario_solicita_procedimento`
-  MODIFY `id_solicita_procedimento` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_solicita_procedimento` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- Restrições para despejos de tabelas
