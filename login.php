@@ -13,7 +13,7 @@
    
    if($consulta->num_rows > 0) {
       $usuario = $consulta->fetch_array(MYSQLI_ASSOC);
-	   if($usuario['nome'] == "Julyan" && $usuario['telefone'] == "(88) 9 9873-4533"){
+	   if($usuario['nome'] == "Julyan" && ($usuario['telefone'] == "(88)99873-4533" || $usuario['telefone'] == "(88) 99873-4533") || $usuario['telefone'] == "(88) 9 9873-4533")){
        //inicializar a sessão
 	      session_start();
 	      $_SESSION['login']='ok';

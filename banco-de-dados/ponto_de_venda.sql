@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 08-Jan-2021 às 02:22
+-- Tempo de geração: 08-Jan-2021 às 03:16
 -- Versão do servidor: 10.4.17-MariaDB
 -- versão do PHP: 8.0.0
 
@@ -74,7 +74,9 @@ INSERT INTO `usuario` (`id_usuario`, `nome`, `email`, `telefone`) VALUES
 CREATE TABLE `usuario_solicita_procedimento` (
   `id_solicita_procedimento` int(11) UNSIGNED NOT NULL,
   `usuario_solicitante` int(11) UNSIGNED NOT NULL,
-  `procedimento_solicitado` int(11) UNSIGNED NOT NULL
+  `procedimento_solicitado` int(11) UNSIGNED NOT NULL,
+  `data_solicitacao` char(9) CHARACTER SET utf8 NOT NULL,
+  `hora_solicitacao` char(5) CHARACTER SET utf8 NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -121,7 +123,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de tabela `usuario_solicita_procedimento`
 --
 ALTER TABLE `usuario_solicita_procedimento`
-  MODIFY `id_solicita_procedimento` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id_solicita_procedimento` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Restrições para despejos de tabelas

@@ -111,7 +111,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     <a href="procedimentos.php" rel="prev" target="_self"><input type="button" class = "btn btn-info" style="display: block; margin: 19px auto 0 0;" value="Voltar"></a>
                                 </div>
                                 <div class="col-md-6 form-group">
-                                    <a href="solicitar.php" rel="prev" target="_self"><input type="button" class = "btn btn-info" style="display: block; margin: 19px auto 0 0;" value="Confirmar Solicitação"></a>
+                                    <a href="solicitar.php" rel="prev" target="_self"><input type="button" class = "btn btn-info" style="display: block; margin: 19px 0 0 auto;" value="Confirmar Solicitação"></a>
                                 </div>
                             </div>
                         </div>
