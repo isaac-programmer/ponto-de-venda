@@ -13,12 +13,8 @@
     $delete = $conexao->query($sql);
 
     if($delete == true){
-        session_start();    
-        $_SESSION['delete'] = 'ok';
-        header('Location: solicitacoes.php');
+        header('Location: solicitacoes.php?delete=ok');
     }else{
-        session_start();
-        $_SESSION['delete'] = 'erro';
-        header('Location: solicitacoes.php');
+        header('Location: solicitacoes.php?delete=erro');
     }
 ?>

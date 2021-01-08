@@ -94,14 +94,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 }
                             }
                             
-                            if(isset($_SESSION['delete'])){
-                                if($_SESSION['delete'] == 'ok'){
+                            if(isset($_GET['delete'])){
+                                if($_GET['delete'] == 'ok'){
                                     echo '<div class="alert alert-success" role="alert">
                                             <strong>Solicitação excluída com sucesso!</strong>
                                           </div>';
                                 }
 
-                                if ($_SESSION['delete'] == 'erro') {
+                                if ($_GET['delete'] == 'erro') {
                                     echo '<div class="alert alert-danger" role="alert">
 								            <strong>Erro ao excluir a solicitação!</strong>
 							              </div>';
