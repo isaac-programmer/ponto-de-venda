@@ -131,7 +131,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 <div class="col-md-12 form-group"><label for=""></label></div>
                                             </div>
                                             <div class="col-md-6 form-group">
-                                                <a href="solicitacoes.php" rel="prev" target="_self"><input type="button" value="Voltar" class = "btn btn-info" style="display: block; margin: 19px auto 0 0;"></a>
+                                                <a href="lista-de-procedimentos.php" rel="prev" target="_self"><input type="button" value="Voltar" class = "btn btn-info" style="display: block; margin: 19px auto 0 0;"></a>
                                             </div>
                                             <div class="col-md-6 form-group">
                                                 <button type="submit" class = "btn btn-info" style="display: block; margin: 19px 0 0 auto;">Cadastrar</button>
