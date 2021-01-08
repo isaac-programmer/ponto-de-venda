@@ -76,48 +76,45 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <section id="main-content">
                 <section class="wrapper">
                     <div class="table-agile-info">
-                        <form method="#" action="#">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <span class="panel-title">Checkout</span>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <span class="panel-title">Checkout</span>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-striped b-t b-light">
+                                    <thead>
+                                        <tr>
+                                            <th>Procedimento</th>
+                                            <th>Solicitante</th>
+                                            <th>E-mail</th>
+                                            <th>Telefone</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                            include('../banco.php');
+
+                                            $total_procedimentos = $_SESSION['qtd_procedimentos'];
+
+                                            for($i=0; $i < $total_procedimentos; $i++) { 
+                                                echo '<tr>
+                                                        <td>'.$_SESSION['procedimentos'][$i].'</td>
+                                                        <td>'.$_SESSION['nome'].'</td>
+                                                        <td>'.$_SESSION['email'].'</td>
+                                                        <td>'.$_SESSION['telefone'].'</td>
+                                                        </tr>';
+                                            }
+                                        ?>
+                                    </tbody>
+                                </table>
+                                <div class="col-md-6 form-group">
+                                    <a href="procedimentos.php" rel="prev" target="_self"><input type="button" class = "btn btn-info" style="display: block; margin: 19px auto 0 0;" value="Voltar"></a>
                                 </div>
-                                <div class="table-responsive">
-                                    <table class="table table-striped b-t b-light">
-                                        <thead>
-                                            <tr>
-                                                <th>Procedimento</th>
-                                                <th>Solicitante</th>
-                                                <th>E-mail</th>
-                                                <th>Telefone</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <?php
-                                                include('../banco.php');
-
-                                                $total_procedimentos = $_SESSION['qtd_procedimentos'];
-
-                                                for ($i=0; $i < $total_procedimentos; $i++) { 
-                                                    echo '<tr>
-                                                            <td>'.$_SESSION['procedimentos'][$i].'</td>
-                                                            <td>'.$_SESSION['nome'].'</td>
-                                                            <td>'.$_SESSION['email'].'</td>
-                                                            <td>'.$_SESSION['telefone'].'</td>
-                                                          </tr>';
-                                                }
-                                            ?>
-                                            
-                                        </tbody>
-                                    </table>
-                                    <div class="col-md-6 form-group">
-                                        <a href="procedimentos.php" rel="prev" target="_self"><input type="button" class = "btn btn-info" style="display: block; margin: 19px auto 0 0;" value="Voltar"></a>
-                                    </div>
-                                    <div class="col-md-6 form-group">
-                                        <button type="submit" class="btn btn-info" style="display: block; margin: 19px 0 0 auto;">Solicitar</button>
-                                    </div>
+                                <div class="col-md-6 form-group">
+                                    <a href="solicitar.php" rel="prev" target="_self"><input type="button" class = "btn btn-info" style="display: block; margin: 19px auto 0 0;" value="Confirmar Solicitação"></a>
                                 </div>
                             </div>
-                    </form>
+                        </div>
                     </div>                
                 </section>
                 <!-- footer -->
