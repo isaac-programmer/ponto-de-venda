@@ -87,6 +87,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                           </div>';
                                 }
                             }
+                            
+                            if(isset($_SESSION['delete'])){
+                                if($_SESSION['delete'] == 'ok'){
+                                    echo '<div class="alert alert-success" role="alert">
+                                            <strong>Solicitação excluída com sucesso!</strong>
+                                          </div>';
+                                }
+
+                                if ($_SESSION['delete'] == 'erro') {
+                                    echo '<div class="alert alert-danger" role="alert">
+								            <strong>Erro ao excluir a solicitação!</strong>
+							              </div>';
+                                }
+                            } 
 			            ?>
                         <div class="panel panel-default">
                             <div class="panel-heading">
@@ -100,20 +114,36 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                             <th>Solicitante</th>
                                             <th>E-mail</th>
                                             <th>Telefone</th>
+                                            <th>Opções</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <?php
                                             include('../banco.php');
 
-                                            $sql = "select * from usuario u JOIN usuario_solicita_procedimento usp "
+                                            $sql = "select usp.id_solicita_procedimento, p.nome nome_procedimento, u.nome nome_usuario, u.email email_usuario, u.telefone telefone_usuario from usuario u
+                                                    JOIN usuario_solicita_procedimento usp 
+                                                    ON u.id_usuario = usp.usuario_solicitante
+                                                    JOIN procedimento p
+                                                    ON usp.procedimento_solicitado = p.id_procedimento";
+
+                                            $consulta = $conexao->query($sql);
+
+                                            if($consulta->num_rows > 0){
+                                                while($linha = $consulta->fetch_array(MYSQLI_ASSOC)){
+                                                    echo '<tr>
+                                                            <td>'.$linha['nome_procedimento'].'</td>
+                                                            <td>'.$linha['nome_usuario'].'</td>
+                                                            <td>'.$linha['email_usuario'].'</td>
+                                                            <td>'.$linha['telefone_usuario'].'</td>
+                                                            <td>
+                                                                <a href="deletar02.php?id='.$linha['id_solicita_procedimento'].'" title="Excluir Solicitação"><i class="fa fa-trash-o text-danger text"></i></a>
+                                                            </td>
+                                                          </tr>';
+                                                }
+                                            }
                                         ?>
-                                        <tr>
-                                            <td>Óptica Kiroshi MK-1</td>
-                                            <td>aaadasd</td>
-                                            <td>asddasd@dadasdasd</td>
-                                            <td>998979787897</td>
-                                        </tr>
+                                        
                                     </tbody>
                                 </table>
                             </div>   
