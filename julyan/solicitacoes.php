@@ -86,8 +86,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <section class="wrapper">
                     <div class="table-agile-info">
                         <?php 
-                            if(isset($_SESSION['login'])){
-                                if($_SESSION['login'] == 'ok'){
+                            if(isset($_GET['login'])){
+                                if($_GET['login'] == 'ok'){
                                     echo '<div class="alert alert-success" role="alert">
                                             <strong>Login efetuado com sucesso!</strong>
                                           </div>';

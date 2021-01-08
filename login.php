@@ -17,7 +17,7 @@
        //inicializar a sessão
 	      session_start();
 	      $_SESSION['login'] = 'ok';
-         header('Location: julyan/solicitacoes.php');
+         header('Location: julyan/solicitacoes.php?login=ok');
       }else{
         //inicializar a sessão
 	      session_start();
@@ -25,7 +25,7 @@
 	      $_SESSION['nome'] = $nome;
          $_SESSION['email'] = $email;
          $_SESSION['telefone'] = $telefone;
-         header('Location: usuario/procedimentos.php');
+         header('Location: usuario/procedimentos.php?login=ok');
       }  
    }else{
       header('Location: index.php?login=erro');
