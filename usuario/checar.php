@@ -1,6 +1,5 @@
 <?php
     //Marco consegui fazer uma área de chekout dinâmica!!!
-    $id_usuario = $_POST['id_usuario']
     $limite = count($_POST);
     $cont = 1;
     $qtd_procedimentos = 0;
@@ -22,7 +21,10 @@
     }
 
     if($qtd_procedimentos > 0 && $posicao > 0){
-        header('Location: checkout.php?id_usu='.$id_usuario.'&qtd_p='.$qtd_procedimentos.'&proce='.$procedimentos.'');
+        session_start();
+        $_SESSION['procedimentos'] = $procedimentos;
+        $_SESSION['qtd_procedimentos'] = $qtd_procedimentos;
+        header('Location: checkout.php');
     }else{
         header('Location: procedimentos.php?enviar_procedimentos=erro');
     }

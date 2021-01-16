@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!--A Design by W3layouts
 Author: W3layout
 Author URL: http://w3layouts.com
@@ -91,26 +94,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         <?php
                                             include('../banco.php');
 
-                                            if(isset($_GET['id_usu']) && isset($_GET['qtd_p']) && isset($_GET['proce'])){
-                                                $id_usuario = $_GET['id_usu'];
-                                                $total_procedimentos = $_GET['qtd_p'];
-                                                $procedimentos = $_GET['proce'];                                                
+                                            $total_procedimentos = $_SESSION['qtd_procedimentos'];
 
-                                                $sql = "select nome, email, telefone from usuario where id_usuario = $id_usuario";
-
-                                                $consulta = $conexao->query($sql);
-
-                                                if($consulta->num_rows > 0){
-                                                    $linha = $consulta->fetch_array(MYSQLI_ASSOC);
-                                                    for($i=0; $i < $total_procedimentos; $i++) { 
-                                                        echo '<tr>
-                                                                <td>'.$procedimentos[$i].'</td>
-                                                                <td>'.$linha['nome'].'</td>
-                                                                <td>'.$linha['email'].'</td>
-                                                                <td>'.$linha['telefone'].'</td>
-                                                              </tr>';
-                                                    }
-                                                }
+                                            for($i=0; $i < $total_procedimentos; $i++) { 
+                                                echo '<tr>
+                                                        <td>'.$_SESSION['procedimentos'][$i].'</td>
+                                                        <td>'.$_SESSION['nome'].'</td>
+                                                        <td>'.$_SESSION['email'].'</td>
+                                                        <td>'.$_SESSION['telefone'].'</td>
+                                                        </tr>';
                                             }
                                         ?>
                                     </tbody>
@@ -118,11 +110,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 <div class="col-md-6 form-group">
                                     <a href="procedimentos.php" rel="prev" target="_self"><input type="button" class = "btn btn-info" style="display: block; margin: 19px auto 0 0;" value="Voltar"></a>
                                 </div>
-                                <?php
-                                    echo '<div class="col-md-6 form-group">
-                                            <a href="solicitar.php?id_usuario='.$id_usuario.'&qtd_proces='.$total_procedimentos.'&proces='.$procedimentos.'" rel="prev" target="_self"><input type="button" class = "btn btn-info" style="display: block; margin: 19px 0 0 auto;" value="Confirmar Solicitação"></a>
-                                          </div>';
-                                ?>
+                                <div class="col-md-6 form-group">
+                                    <a href="solicitar.php" rel="prev" target="_self"><input type="button" class = "btn btn-info" style="display: block; margin: 19px 0 0 auto;" value="Confirmar Solicitação"></a>
+                                </div>
                             </div>
                         </div>
                     </div>                
