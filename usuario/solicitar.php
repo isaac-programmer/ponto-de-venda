@@ -1,23 +1,13 @@
 <?php
-    session_start();
-
     include('../banco.php');
 
-    $procedimentos = $_SESSION['procedimentos'];
-    $limite = $_SESSION['qtd_procedimentos'];
-    $nome_usuario = $_SESSION['nome'];
-    $telefone_usuario = $_SESSION['telefone'];
+    $procedimentos = $_GET['proces'];
+    $limite = $_GET['qtd_proces'];
     $data_solicitacao = date("d/m/Y");
 
     //Obtendo o id do usuário solicitante
-    $sql = "select id_usuario from usuario where nome = '$nome_usuario' and telefone = '$telefone_usuario'";
+    $id_usuario = $_GET['id_usuario'];
 
-    $consulta = $conexao->query($sql);
-
-    $linha = $consulta->fetch_array(MYSQLI_ASSOC);
-
-    $id_usuario = $linha['id_usuario'];
-    
     //Fazendo um Select para cada procedimento presente no array procedimentos
     for($i=0; $i<$limite; $i++) { 
         $sql2[$i] = "select id_procedimento from procedimento where nome = '$procedimentos[$i]'";

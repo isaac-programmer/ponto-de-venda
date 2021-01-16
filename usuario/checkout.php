@@ -108,7 +108,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                                 <td>'.$linha['nome'].'</td>
                                                                 <td>'.$linha['email'].'</td>
                                                                 <td>'.$linha['telefone'].'</td>
-                                                                </tr>';
+                                                              </tr>';
                                                     }
                                                 }
                                             }
@@ -118,9 +118,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 <div class="col-md-6 form-group">
                                     <a href="procedimentos.php" rel="prev" target="_self"><input type="button" class = "btn btn-info" style="display: block; margin: 19px auto 0 0;" value="Voltar"></a>
                                 </div>
-                                <div class="col-md-6 form-group">
-                                    <a href="solicitar.php" rel="prev" target="_self"><input type="button" class = "btn btn-info" style="display: block; margin: 19px 0 0 auto;" value="Confirmar Solicitação"></a>
-                                </div>
+                                <?php
+                                    echo '<div class="col-md-6 form-group">
+                                            <a href="solicitar.php?id_usuario='.$id_usuario.'&qtd_proces='.$total_procedimentos.'&proces='.$procedimentos.'" rel="prev" target="_self"><input type="button" class = "btn btn-info" style="display: block; margin: 19px 0 0 auto;" value="Confirmar Solicitação"></a>
+                                          </div>';
+                                ?>
                             </div>
                         </div>
                     </div>                
