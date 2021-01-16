@@ -161,7 +161,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     </div>
                     <div class="modal-footer">
                         <button class="btn btn-primary" type="button" data-dismiss="modal">Cancelar</button>
-                        <a class="btn btn-danger" href="sair.php">Sair</a>
+                        <a class="btn btn-danger" href="../sair.php">Sair</a>
                     </div>
                 </div>
             </div>
