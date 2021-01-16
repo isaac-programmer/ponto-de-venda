@@ -12,7 +12,7 @@
       $telefone = $_POST['telefone'];
    
       //criando uma consulta mysql
-      $sql  = "select nome, email, telefone from usuario where nome='$nome' and email='$email' and telefone='$telefone'";
+      $sql  = "select * from usuario where nome='$nome' and email='$email' and telefone='$telefone'";
    
       $consulta = $conexao->query($sql);
       
@@ -25,10 +25,7 @@
          }else{
          //inicializar a sessão
             $_SESSION['login'] = 'ok';
-            $_SESSION['nome'] = $nome;
-            $_SESSION['email'] = $email;
-            $_SESSION['telefone'] = $telefone;
-            header('Location: usuario/procedimentos.php?login=ok');
+            header('Location: usuario/procedimentos.php?login=ok&id_usu='.$usuario['id_usuario'].'');
          }  
       }else{
          header('Location: index.php?login=erro');

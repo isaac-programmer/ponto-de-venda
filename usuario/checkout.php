@@ -1,6 +1,3 @@
-<?php
-	session_start();
-?>
 <!--A Design by W3layouts
 Author: W3layout
 Author URL: http://w3layouts.com
@@ -94,15 +91,26 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         <?php
                                             include('../banco.php');
 
-                                            $total_procedimentos = $_SESSION['qtd_procedimentos'];
+                                            if(isset($_GET['id_usu']) && isset($_GET['qtd_p']) && isset($_GET['proce'])){
+                                                $id_usuario = $_GET['id_usu'];
+                                                $total_procedimentos = $_GET['qtd_p'];
+                                                $procedimentos = $_GET['proce'];                                                
 
-                                            for($i=0; $i < $total_procedimentos; $i++) { 
-                                                echo '<tr>
-                                                        <td>'.$_SESSION['procedimentos'][$i].'</td>
-                                                        <td>'.$_SESSION['nome'].'</td>
-                                                        <td>'.$_SESSION['email'].'</td>
-                                                        <td>'.$_SESSION['telefone'].'</td>
-                                                        </tr>';
+                                                $sql = "select nome, email, telefone from usuario where id_usuario = $id_usuario";
+
+                                                $consulta = $conexao->query($sql);
+
+                                                if($consulta->num_rows > 0){
+                                                    $linha = $consulta->fetch_array(MYSQLI_ASSOC);
+                                                    for($i=0; $i < $total_procedimentos; $i++) { 
+                                                        echo '<tr>
+                                                                <td>'.$procedimentos[$i].'</td>
+                                                                <td>'.$linha['nome'].'</td>
+                                                                <td>'.$linha['email'].'</td>
+                                                                <td>'.$linha['telefone'].'</td>
+                                                                </tr>';
+                                                    }
+                                                }
                                             }
                                         ?>
                                     </tbody>

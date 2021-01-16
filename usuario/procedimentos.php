@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	if(!isset($_SESSION['login'])){
+	if(!isset($_SESSION['login']) || !isset($_GET['id_usu'])){
 		header('Location: ../index.php?login=semsessao');
 	}
 ?>
@@ -112,7 +112,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         </div>
                                         <?php 
                                             include('../banco.php');
-                                            
+
+                                            $id_usuario = $_GET['id_usu'];
+                
                                             $sql = "select * from procedimento";
 
                                             $consulta = $conexao->query($sql);
@@ -140,16 +142,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                           </div>';
                                                           $cont += 1;
                                                 }
+                                                echo '<div class="col-md-12 form-group">
+                                                        <input type="text" value="'.$id_usuario.'" name="id_usuario" placeholder=".col-md-12" class="form-control" required="" readonly>
+                                                      </div>';
+                                                echo '<div class="col-md-12 form-group">
+                                                        <button type="submit" class="btn btn-info" style="display: block; margin: 19px auto 0 auto;">Solicitar Procedimentos</button>
+                                                      </div>';
                                             }else{
                                                 echo '<div class="alert alert-danger" role="alert">
                                                         <strong>Nenhum procedimento foi encontrado!</strong>
                                                       </div>';
                                             }
                                         ?>
-                                        
-                                        <div class="col-md-12 form-group">
-                                            <button type="submit" class="btn btn-info" style="display: block; margin: 19px auto 0 auto;">Solicitar Procedimentos</button>
-                                        </div>
                                     </section>
                                 </form>
                             </div>
